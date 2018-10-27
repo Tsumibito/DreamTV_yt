@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block headercontent %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    {% load bootstrap3 %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    {# Display django.contrib.messages as Bootstrap alerts #}
+    {% bootstrap_messages %}
+{% endblock headercontent %}
+
+
+
+{% block body_content %}
+    <div class="container">
+    <h1>DreamTV Youtube LinkBuilding Generator Results</h1>
+    <div class="jumbotron">
+        <h3>{{ url }} <span class="label label-default"></span></h3>
+
+        <span class="label label-success">Результатов: {{ links_number }} </span>
+    </div>
+
+    <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Results:</h3>
+  </div>
+  <div class="panel-body">
+      {{ results|safe }}
+  </div>
+</div>
+
+{% endblock body_content %}
