@@ -41,9 +41,12 @@ INSTALLED_APPS = [
     'url_generator.apps.UrlGeneratorConfig',
     'bootstrap3',
     'b2_storage',
+    'rest_framework',
     #'django_fine_uploader.apps.DjangoFineUploaderConfig',
     'django_file_form',
     'django_file_form.ajaxuploader',
+    'redis',
+
 
 ]
 
@@ -204,6 +207,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -224,6 +228,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
 
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 STATICFILES_FINDERS = ("django.contrib.staticfiles.finders.FileSystemFinder",
                      "django.contrib.staticfiles.finders.AppDirectoriesFinder")
@@ -233,3 +244,14 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 
 ADMINS = [
         'Alex Tsumibito', 'alex.tsumibito@gmail.com',]
+
+# REDIS related settings
+REDIS_HOST = 'localhost'
+REDIS_PORT = '6379'
+BROKER_URL = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'  #redis://localhost:6379/0
+BROKER_TRANSPORT_OPTIONS = {'visibility_timeout': 3600}
+CELERY_RESULT_BACKEND = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
+CELERY_TRACK_STARTED = True
+WORKER_STATE_DB = '/tmp/celery_state'
+CELERYD_HIJACK_ROOT_LOGGER=True
+

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block headercontent %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    {% load bootstrap3 %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    {# Display django.contrib.messages as Bootstrap alerts #}
+    {% bootstrap_messages %}
+{% endblock headercontent %}
+
+{% block jsimport %}
+
+{% endblock jsimport %}
+
+
+
+{% block body_content %}
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>Add URLS Results</h1>
+        </div>
+
+        <div class="panel-heading">
+            <h3 class="panel-title">URLs in this Check Session: {{ check_urls_count }}</h3>
+            <h4 class="panel-title" id="work-fine">URLs that work fine: <b>0</b></h4>
+            <h4 class="panel-title" id="junk">Junk URLs: <b>0</b></h4>
+        </div>
+
+        <div class="panel-body">
+            <table class="table table-sm" id="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Url</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Result</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for c_url in check_urls %}
+                    <tr class="table active">
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ check_urls.url|safe }}</td>
+                        <td>INITIALAZUNG</td>
+                        <td>None</td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+
+        <div class="panel-heading">
+            <h3 class="panel-title">URLs in that already in our base: {{ have_urls_count }}</h3>
+        </div>
+
+        <div class="panel-body">
+            {% for url in have_urls %}
+                <p>{{ url }}</p>
+            {% endfor %}
+            {{ text_have|safe }}
+        </div>
+
+    </div>
+{% endblock body_content %}
+
+{% block jsfin %}
+    <script src="{% static 'js/add_urls_results.js' %}" type="text/javascript"></script>
+{% endblock jsfin %}

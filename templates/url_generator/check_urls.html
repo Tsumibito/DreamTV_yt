@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block headercontent %}
+    <meta charset="UTF-8">
+    <title>Check URLS</title>
+
+
+    {% load bootstrap3 %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    {# Display django.contrib.messages as Bootstrap alerts #}
+    {% bootstrap_messages %}
+{% endblock headercontent %}
+
+{% block jsimport %}{% endblock jsimport %}
+
+
+{% block body_content %}
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>Check URLS</h1>
+        </div>
+        <div class="panel-heading">
+            <h3 class="panel-title">URLs in this Check Session: {{ count_urls }}</h3>
+            <h3 class="panel-title" id="work-fine">URLs that work fine: <b>0</b></h3>
+            <h3 class="panel-title" id="junk">Junk URLs: <b>0</b></h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-sm" id="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Url</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Result</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for ud in url_dics %}
+                    <tr class="table active">
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ ud.url|safe }}</td>
+                        <td>PANDING</td>
+                        <td>None</td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+{% endblock body_content %}
+
+{% block jsfin %}
+    <script src="{% static 'js/check_urls_list.js' %}" type="text/javascript"></script>
+{% endblock jsfin %}

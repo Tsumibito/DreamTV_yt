@@ -1,26 +1,23 @@
-from django.conf.urls import url
 from django.urls import include, path, re_path
 from url_generator import views
-from django.conf.urls.static import static
-from django.conf import settings
-#from django.views.generic import RedirectView
+from url_generator.views import CheckUrlsProcessor, AddUrlsProcessor, AddSearchUrlsProcessor, ParseUrlsProcessor
 
 
 app_name = 'url_generator'
 urlpatterns = [
     path('', views.generator_settings, name='generator_settings'),
-    path('up/', views.ExampleFormView.as_view(), name='upload_file'),
+    path('check_urls/', views.check_urls, name='check_urls'),
+    path('check_urls/list/', views.check_urls_list, name='check_urls_list'),
+    path('check_urls/processor/', CheckUrlsProcessor.as_view(), name='check_urls_processor'),
+    path('add_urls/', views.add_urls, name='add_urls'),
+    path('add_urls/results/', views.add_urls_results, name='add_urls_results'),
+    path('add_urls/processor/', AddUrlsProcessor.as_view(), name='add_urls_processor'),
+    path('add_search_urls/', views.add_search_urls, name='add_search_urls'),
+    path('add_search_urls/results/', views.add_search_urls_results, name='add_search_urls_results'),
+    path('add_search_urls/processor/', AddSearchUrlsProcessor.as_view(), name='add_search_urls_processor'),
+    path('sus_domains/', views.sus_domains, name='sus_domains'),
+    path('parse_urls/', views.parse_urls, name='parse_urls'),
+    path('parse_urls/results/', views.parse_urls_results, name='parse_urls_results'),
+    path('parse_urls/processor/', ParseUrlsProcessor.as_view(), name='parse_urls_processor'),
     re_path(r'^(?P<id>[0-9]+)/$', views.generator_results, name='generator_res'),
-    #path('ex/', view=views.ExampleView.as_view(), name='home'),
-    #path('ex/upload-1/', view=views.MyAppUploaderView.as_view(), name='uploader-1'),
-    #path('ex/upload-2/', view=views.NotConcurrentUploaderView.as_view(), name='uploader-2'),
-    #path('ex/upload-3/', view=views.SimpleCustomUploaderView.as_view(), name='uploader-3'),
-    #path('ex/upload-4/', view=views.CustomFineUploaderView.as_view(), name='uploader-4'),
-    ] #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-# url(r'^$', RedirectView.as_view(url='/UA/')),
-# url(r'^(?P<lang>UA|RU|EN)/$', views.lead, name='lead'),
-# url(r'^breaf/(?P<lang>UA|RU|EN)/(?P<id>[0-9]+)/$', views.breafme, name='breaf'),
-# url(r'^thankyou/(?P<lang>UA|RU|EN)/(?P<id>[0-9]+)/$', views.thankyou, name='thankyou'),
-# url(r'^confirm/(?P<lang>UA|RU|EN)/(?P<id>[0-9]+)/(?P<code>[0-9]+)/$', views.confirm, name='confirm'),
-# url(r'^privacy-policy/(?P<lang>UA|RU|EN)/$', views.privacy, name='privacy')
+    ]

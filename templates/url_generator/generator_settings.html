@@ -22,8 +22,15 @@
 {% block body_content %}
     <div class="container">
     <h1>DreamTV Youtube LinkBuilding Generator</h1>
+    <a type="button" class="btn btn-primary" href="{% url 'url_generator:add_urls' %}">Add urls</a>
+    <a type="button" class="btn btn-warning" href="{% url 'url_generator:add_search_urls' %}">Add search urls</a>
+    <a type="button" class="btn btn-warning" href="{% url 'url_generator:parse_urls' %}">Parce urls</a>
+    <a type="button" class="btn btn-info" href="{% url 'url_generator:check_urls' %}">Check urls</a>
+    <br />
+    <br />
+    <br />
 
-
+    <h2>Generate links (active urls: {{ active_count }})</h2>
     <form method="post" enctype="multipart/form-data"> {% csrf_token %}
 {% comment %}		<div>
             <div class="input-group">
@@ -48,12 +55,6 @@
             </button>
 
 	</form>
-
-
-
-
-
-
 
 {% endblock body_content %}
 
