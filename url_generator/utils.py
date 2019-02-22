@@ -71,13 +71,6 @@ def get_domain_name(url):
 def get_http_and_domain(url):
     return str(url)[0:url.find('/', 8, len(url))]
 
-def find_x_from_list_in_url(url, list):
-    res = []
-    for item in list:
-        if url.find(item) != -1:
-            res.append(item)
-    return res
-
 def lp_api_call(proj_name, dripfeed, urls):
     key = '9834099457cd9c6386dab483c126e73a8db99129f591'
     url = 'https://api.linkprocessor.net/api.php?apikey=%s&proj_name=%s&dripfeed=%d&urls=%s' % (key, proj_name, dripfeed, urls)

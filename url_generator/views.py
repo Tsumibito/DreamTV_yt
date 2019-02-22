@@ -2,10 +2,6 @@ from django.shortcuts import render, redirect
 from url_generator.random_text import give_me_rand_text_set
 from url_generator.models import UrlGeneratorTask, SearchStack, SearchUrlStack
 from url_generator.forms import UrlGeneratorTaskModelForm, AddUrlsForm, AddSearchUrlsForm, ParseUrlsForm
-from django.utils.text import slugify
-
-from unidecode import unidecode
-
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import authentication
@@ -13,12 +9,6 @@ from rest_framework import permissions
 from DreamTV_world.tasks import *
 from celery.result import AsyncResult
 import requests
-import celery
-from celery import uuid
-from urllib.parse import quote, unquote
-import codecs
-import urllib
-
 from url_generator.utils import *
 
 
