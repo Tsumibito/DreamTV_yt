@@ -1,0 +1,1354 @@
+[2019-01-19 13:45:57,980: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2019-01-19 13:45:57,985: DEBUG/MainProcess] | Worker: Building graph...
+[2019-01-19 13:45:57,986: DEBUG/MainProcess] | Worker: New boot order: {Beat, Timer, Hub, Pool, Autoscaler, StateDB, Consumer}
+[2019-01-19 13:45:58,023: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2019-01-19 13:45:58,024: DEBUG/MainProcess] | Consumer: Building graph...
+[2019-01-19 13:45:58,073: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Tasks, Control, Agent, Gossip, Heart, event loop}
+[2019-01-19 13:45:58,121: DEBUG/MainProcess] | Worker: Starting Hub
+[2019-01-19 13:45:58,121: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:45:58,122: DEBUG/MainProcess] | Worker: Starting Pool
+[2019-01-19 13:45:58,413: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:45:58,414: DEBUG/MainProcess] | Worker: Starting Consumer
+[2019-01-19 13:45:58,415: DEBUG/MainProcess] | Consumer: Starting Connection
+[2019-01-19 13:45:58,445: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2019-01-19 13:45:58,445: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:45:58,446: DEBUG/MainProcess] | Consumer: Starting Events
+[2019-01-19 13:45:58,467: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:45:58,467: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2019-01-19 13:45:58,467: INFO/MainProcess] mingle: searching for neighbors
+[2019-01-19 13:45:59,514: INFO/MainProcess] mingle: all alone
+[2019-01-19 13:45:59,514: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:45:59,515: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2019-01-19 13:45:59,521: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:45:59,522: DEBUG/MainProcess] | Consumer: Starting Control
+[2019-01-19 13:45:59,525: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:45:59,526: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2019-01-19 13:45:59,531: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:45:59,532: DEBUG/MainProcess] | Consumer: Starting Heart
+[2019-01-19 13:45:59,535: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:45:59,536: DEBUG/MainProcess] | Consumer: Starting event loop
+[2019-01-19 13:45:59,536: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2019-01-19 13:45:59,538: WARNING/MainProcess] /Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-01-19 13:45:59,539: INFO/MainProcess] celery@MacBook-Pro-Aleksej-2.local ready.
+[2019-01-19 13:45:59,539: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2019-01-19 13:46:57,800: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[ad25c35a-b43d-41d3-b2c4-a3ac549d208b]  
+[2019-01-19 13:46:57,801: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10a08e488> (args:('DreamTV_world.tasks.task_parse_url', 'ad25c35a-b43d-41d3-b2c4-a3ac549d208b', {'lang': 'py', 'task': 'DreamTV_world.tasks.task_parse_url', 'id': 'ad25c35a-b43d-41d3-b2c4-a3ac549d208b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'ad25c35a-b43d-41d3-b2c4-a3ac549d208b', 'parent_id': None, 'argsrepr': "('LgPWgqVGanA', '10-websites-you-can-make-100-a-day-from-online-no-special-skills', 'https://playtube.pk/watch?v=LgPWgqVGanA')", 'kwargsrepr': '{}', 'origin': 'gen13109@MacBook-Pro-Aleksej-2.local', 'reply_to': '215cf582-06aa-3039-9b8c-0ad85b73ff8e', 'correlation_id': 'ad25c35a-b43d-41d3-b2c4-a3ac549d208b', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["LgPWgqVGanA", "10-websites-you-can-make-100-a-day-from-online-no-special-skills", "https://playtube.pk/watch?v=LgPWgqVGanA"], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2019-01-19 13:46:57,803: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[3224a3ea-acc4-4c22-be85-b2a4d8b6cf15]  
+[2019-01-19 13:46:57,804: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10a08e488> (args:('DreamTV_world.tasks.task_parse_url', '3224a3ea-acc4-4c22-be85-b2a4d8b6cf15', {'lang': 'py', 'task': 'DreamTV_world.tasks.task_parse_url', 'id': '3224a3ea-acc4-4c22-be85-b2a4d8b6cf15', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '3224a3ea-acc4-4c22-be85-b2a4d8b6cf15', 'parent_id': None, 'argsrepr': "('LgPWgqVGanA', '10-websites-you-can-make-100-a-day-from-online-no-special-skills', 'https://nicktube.net/watch?v=LgPWgqVGanA')", 'kwargsrepr': '{}', 'origin': 'gen13109@MacBook-Pro-Aleksej-2.local', 'reply_to': '215cf582-06aa-3039-9b8c-0ad85b73ff8e', 'correlation_id': '3224a3ea-acc4-4c22-be85-b2a4d8b6cf15', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["LgPWgqVGanA", "10-websites-you-can-make-100-a-day-from-online-no-special-skills", "https://nicktube.net/watch?v=LgPWgqVGanA"], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2019-01-19 13:46:57,807: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[45d0e92c-2cd4-43db-9a95-b6b0bfa9fc09]  
+[2019-01-19 13:46:57,807: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10a08e488> (args:('DreamTV_world.tasks.task_parse_url', '45d0e92c-2cd4-43db-9a95-b6b0bfa9fc09', {'lang': 'py', 'task': 'DreamTV_world.tasks.task_parse_url', 'id': '45d0e92c-2cd4-43db-9a95-b6b0bfa9fc09', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '45d0e92c-2cd4-43db-9a95-b6b0bfa9fc09', 'parent_id': None, 'argsrepr': "('LgPWgqVGanA', '10-websites-you-can-make-100-a-day-from-online-no-special-skills', 'https://kingtradeguide.com/index.php/blog/freelance-writing/')", 'kwargsrepr': '{}', 'origin': 'gen13109@MacBook-Pro-Aleksej-2.local', 'reply_to': '215cf582-06aa-3039-9b8c-0ad85b73ff8e', 'correlation_id': '45d0e92c-2cd4-43db-9a95-b6b0bfa9fc09', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["LgPWgqVGanA", "10-websites-you-can-make-100-a-day-from-online-no-special-skills", "https://kingtradeguide.com/index.php/blog/freelance-writing/"], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord":... kwargs:{})
+[2019-01-19 13:46:57,808: DEBUG/MainProcess] Task accepted: DreamTV_world.tasks.task_parse_url[ad25c35a-b43d-41d3-b2c4-a3ac549d208b] pid:13287
+[2019-01-19 13:46:57,811: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[a21152a2-a104-4de9-9160-ade6bd9a17d4]  
+[2019-01-19 13:46:57,811: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10a08e488> (args:('DreamTV_world.tasks.task_parse_url', 'a21152a2-a104-4de9-9160-ade6bd9a17d4', {'lang': 'py', 'task': 'DreamTV_world.tasks.task_parse_url', 'id': 'a21152a2-a104-4de9-9160-ade6bd9a17d4', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'a21152a2-a104-4de9-9160-ade6bd9a17d4', 'parent_id': None, 'argsrepr': "('LgPWgqVGanA', '10-websites-you-can-make-100-a-day-from-online-no-special-skills', 'https://khothuthuat.com/video-clip-thu-thuat/may-tinh/video-huong-dan-don-rac-may-tinh-bang-ccleaner-2247/?xem_video=LgPWgqVGanA')", 'kwargsrepr': '{}', 'origin': 'gen13109@MacBook-Pro-Aleksej-2.local', 'reply_to': '215cf582-06aa-3039-9b8c-0ad85b73ff8e', 'correlation_id': 'a21152a2-a104-4de9-9160-ade6bd9a17d4', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["LgPWgqVGanA", "10-websites-you-can-make-100-a-day-from-online-no-special-skills",... kwargs:{})
+[2019-01-19 13:46:57,812: DEBUG/MainProcess] Task accepted: DreamTV_world.tasks.task_parse_url[3224a3ea-acc4-4c22-be85-b2a4d8b6cf15] pid:13290
+[2019-01-19 13:46:57,815: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[cfb6a3d5-e5ab-4cde-966f-4d0885ee4e1d]  
+[2019-01-19 13:46:57,816: DEBUG/MainProcess] Task accepted: DreamTV_world.tasks.task_parse_url[a21152a2-a104-4de9-9160-ade6bd9a17d4] pid:13288
+[2019-01-19 13:46:57,816: DEBUG/MainProcess] Task accepted: DreamTV_world.tasks.task_parse_url[45d0e92c-2cd4-43db-9a95-b6b0bfa9fc09] pid:13289
+[2019-01-19 13:46:57,817: WARNING/ForkPoolWorker-1] --- Logging error ---
+[2019-01-19 13:46:57,820: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[b193cd42-eab2-4296-b2b7-5cd30cf88c2b]  
+[2019-01-19 13:46:57,820: WARNING/ForkPoolWorker-4] --- Logging error ---
+[2019-01-19 13:46:57,822: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[62765324-b1d5-499b-b638-b5a4b919df03]  
+[2019-01-19 13:46:57,824: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[e3a8f600-2e68-41c4-8b75-679af7381948]  
+[2019-01-19 13:46:57,825: WARNING/ForkPoolWorker-4] Traceback (most recent call last):
+[2019-01-19 13:46:57,825: WARNING/ForkPoolWorker-1] Traceback (most recent call last):
+[2019-01-19 13:46:57,826: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[c0aa1073-c5d3-4b71-8d28-b330379bde94]  
+[2019-01-19 13:46:57,826: WARNING/ForkPoolWorker-1] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 983, in emit
+    msg = self.format(record)
+[2019-01-19 13:46:57,826: WARNING/ForkPoolWorker-4] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 983, in emit
+    msg = self.format(record)
+[2019-01-19 13:46:57,827: WARNING/ForkPoolWorker-1] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 829, in format
+    return fmt.format(record)
+[2019-01-19 13:46:57,828: WARNING/ForkPoolWorker-4] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 829, in format
+    return fmt.format(record)
+[2019-01-19 13:46:57,828: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/log.py", line 46, in format
+    return ColorFormatter.format(self, record)
+[2019-01-19 13:46:57,828: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/log.py", line 46, in format
+    return ColorFormatter.format(self, record)
+[2019-01-19 13:46:57,828: WARNING/ForkPoolWorker-2] --- Logging error ---
+[2019-01-19 13:46:57,829: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/utils/log.py", line 153, in format
+    msg = logging.Formatter.format(self, record)
+[2019-01-19 13:46:57,829: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/utils/log.py", line 153, in format
+    msg = logging.Formatter.format(self, record)
+[2019-01-19 13:46:57,830: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[4a3934a2-c982-4310-a3f0-e8fffc7ee385]  
+[2019-01-19 13:46:57,830: WARNING/ForkPoolWorker-1] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 569, in format
+    record.message = record.getMessage()
+[2019-01-19 13:46:57,830: WARNING/ForkPoolWorker-4] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 569, in format
+    record.message = record.getMessage()
+[2019-01-19 13:46:57,831: WARNING/ForkPoolWorker-1] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 331, in getMessage
+    msg = msg % self.args
+[2019-01-19 13:46:57,831: WARNING/ForkPoolWorker-4] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 331, in getMessage
+    msg = msg % self.args
+[2019-01-19 13:46:57,831: WARNING/ForkPoolWorker-1] TypeError: not all arguments converted during string formatting
+[2019-01-19 13:46:57,832: WARNING/ForkPoolWorker-4] TypeError: not all arguments converted during string formatting
+[2019-01-19 13:46:57,832: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[289d05b0-a72e-478c-b583-c2172a5a6f7c]  
+[2019-01-19 13:46:57,832: WARNING/ForkPoolWorker-3] --- Logging error ---
+[2019-01-19 13:46:57,832: WARNING/ForkPoolWorker-1] Call stack:
+[2019-01-19 13:46:57,833: WARNING/ForkPoolWorker-4] Call stack:
+[2019-01-19 13:46:57,833: WARNING/ForkPoolWorker-2] Traceback (most recent call last):
+[2019-01-19 13:46:57,834: WARNING/ForkPoolWorker-2] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 983, in emit
+    msg = self.format(record)
+[2019-01-19 13:46:57,834: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[bb15447d-3e62-4df1-bb54-a38e980b53bf]  
+[2019-01-19 13:46:57,834: WARNING/ForkPoolWorker-2] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 829, in format
+    return fmt.format(record)
+[2019-01-19 13:46:57,835: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/log.py", line 46, in format
+    return ColorFormatter.format(self, record)
+[2019-01-19 13:46:57,837: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[a580e117-9f4c-4e13-a12f-65120ea24e33]  
+[2019-01-19 13:46:57,836: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/utils/log.py", line 153, in format
+    msg = logging.Formatter.format(self, record)
+[2019-01-19 13:46:57,836: WARNING/ForkPoolWorker-3] Traceback (most recent call last):
+[2019-01-19 13:46:57,837: WARNING/ForkPoolWorker-2] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 569, in format
+    record.message = record.getMessage()
+[2019-01-19 13:46:57,837: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 983, in emit
+    msg = self.format(record)
+[2019-01-19 13:46:57,838: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 829, in format
+    return fmt.format(record)
+[2019-01-19 13:46:57,838: WARNING/ForkPoolWorker-2] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 331, in getMessage
+    msg = msg % self.args
+[2019-01-19 13:46:57,839: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[ef8d602e-890c-4713-9d06-c2c0196b7764]  
+[2019-01-19 13:46:57,839: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/log.py", line 46, in format
+    return ColorFormatter.format(self, record)
+[2019-01-19 13:46:57,839: WARNING/ForkPoolWorker-2] TypeError: not all arguments converted during string formatting
+[2019-01-19 13:46:57,840: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/utils/log.py", line 153, in format
+    msg = logging.Formatter.format(self, record)
+[2019-01-19 13:46:57,840: WARNING/ForkPoolWorker-2] Call stack:
+[2019-01-19 13:46:57,841: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[a31ceb67-d6a7-4a4a-abcb-4e60463ecd68]  
+[2019-01-19 13:46:57,841: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 569, in format
+    record.message = record.getMessage()
+[2019-01-19 13:46:57,842: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 331, in getMessage
+    msg = msg % self.args
+[2019-01-19 13:46:57,842: WARNING/ForkPoolWorker-3] TypeError: not all arguments converted during string formatting
+[2019-01-19 13:46:57,843: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[1ceee281-48a2-4064-a827-dcbd5ad8e56d]  
+[2019-01-19 13:46:57,843: WARNING/ForkPoolWorker-3] Call stack:
+[2019-01-19 13:46:57,845: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[1ff7122a-e9a6-4d75-a760-e86e5cf71ab3]  
+[2019-01-19 13:46:57,847: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[f96010e5-1ea9-430f-b437-eb10001d500c]  
+[2019-01-19 13:46:57,850: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[2752b710-b1b0-45f0-8e27-1436507b834f]  
+[2019-01-19 13:46:57,852: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[cb309227-b4cd-466f-b8cd-68829b35a8f2]  
+[2019-01-19 13:46:57,855: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/bin/celery", line 11, in <module>
+    sys.exit(main())
+[2019-01-19 13:46:57,855: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/bin/celery", line 11, in <module>
+    sys.exit(main())
+[2019-01-19 13:46:57,855: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/bin/celery", line 11, in <module>
+    sys.exit(main())
+[2019-01-19 13:46:57,855: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/bin/celery", line 11, in <module>
+    sys.exit(main())
+[2019-01-19 13:46:57,856: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+[2019-01-19 13:46:57,856: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+[2019-01-19 13:46:57,856: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+[2019-01-19 13:46:57,856: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+[2019-01-19 13:46:57,857: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+[2019-01-19 13:46:57,857: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+[2019-01-19 13:46:57,857: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+[2019-01-19 13:46:57,857: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+[2019-01-19 13:46:57,857: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+[2019-01-19 13:46:57,858: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+[2019-01-19 13:46:57,858: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+[2019-01-19 13:46:57,858: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 275, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+[2019-01-19 13:46:57,858: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+[2019-01-19 13:46:57,858: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 275, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+[2019-01-19 13:46:57,859: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 488, in handle_argv
+    return self.execute(command, argv)
+[2019-01-19 13:46:57,859: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 275, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+[2019-01-19 13:46:57,859: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 275, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+[2019-01-19 13:46:57,859: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 488, in handle_argv
+    return self.execute(command, argv)
+[2019-01-19 13:46:57,859: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 420, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+[2019-01-19 13:46:57,860: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 488, in handle_argv
+    return self.execute(command, argv)
+[2019-01-19 13:46:57,860: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 488, in handle_argv
+    return self.execute(command, argv)
+[2019-01-19 13:46:57,860: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 420, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+[2019-01-19 13:46:57,860: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+[2019-01-19 13:46:57,860: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 420, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+[2019-01-19 13:46:57,861: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 420, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+[2019-01-19 13:46:57,861: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+[2019-01-19 13:46:57,861: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 238, in __call__
+    ret = self.run(*args, **kwargs)
+[2019-01-19 13:46:57,861: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+[2019-01-19 13:46:57,861: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+[2019-01-19 13:46:57,861: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 238, in __call__
+    ret = self.run(*args, **kwargs)
+[2019-01-19 13:46:57,862: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    worker.start()
+[2019-01-19 13:46:57,862: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 238, in __call__
+    ret = self.run(*args, **kwargs)
+[2019-01-19 13:46:57,862: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 238, in __call__
+    ret = self.run(*args, **kwargs)
+[2019-01-19 13:46:57,862: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    worker.start()
+[2019-01-19 13:46:57,862: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+[2019-01-19 13:46:57,863: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+[2019-01-19 13:46:57,863: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    worker.start()
+[2019-01-19 13:46:57,863: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    worker.start()
+[2019-01-19 13:46:57,863: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+[2019-01-19 13:46:57,864: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+[2019-01-19 13:46:57,864: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+[2019-01-19 13:46:57,864: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+[2019-01-19 13:46:57,864: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+[2019-01-19 13:46:57,864: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+[2019-01-19 13:46:57,865: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+[2019-01-19 13:46:57,865: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+[2019-01-19 13:46:57,865: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 131, in start
+    self.on_start()
+[2019-01-19 13:46:57,865: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 131, in start
+    self.on_start()
+[2019-01-19 13:46:57,865: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+[2019-01-19 13:46:57,865: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 112, in on_start
+    **self.options)
+[2019-01-19 13:46:57,866: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+[2019-01-19 13:46:57,866: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 112, in on_start
+    **self.options)
+[2019-01-19 13:46:57,866: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 131, in start
+    self.on_start()
+[2019-01-19 13:46:57,866: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 432, in __init__
+    super(AsynPool, self).__init__(processes, *args, **kwargs)
+[2019-01-19 13:46:57,866: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 131, in start
+    self.on_start()
+[2019-01-19 13:46:57,867: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 432, in __init__
+    super(AsynPool, self).__init__(processes, *args, **kwargs)
+[2019-01-19 13:46:57,867: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 112, in on_start
+    **self.options)
+[2019-01-19 13:46:57,867: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1007, in __init__
+    self._create_worker_process(i)
+[2019-01-19 13:46:57,867: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 112, in on_start
+    **self.options)
+[2019-01-19 13:46:57,868: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1007, in __init__
+    self._create_worker_process(i)
+[2019-01-19 13:46:57,868: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 449, in _create_worker_process
+    return super(AsynPool, self)._create_worker_process(i)
+[2019-01-19 13:46:57,868: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 432, in __init__
+    super(AsynPool, self).__init__(processes, *args, **kwargs)
+[2019-01-19 13:46:57,868: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 449, in _create_worker_process
+    return super(AsynPool, self)._create_worker_process(i)
+[2019-01-19 13:46:57,868: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 432, in __init__
+    super(AsynPool, self).__init__(processes, *args, **kwargs)
+[2019-01-19 13:46:57,869: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1116, in _create_worker_process
+    w.start()
+[2019-01-19 13:46:57,869: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1116, in _create_worker_process
+    w.start()
+[2019-01-19 13:46:57,869: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1007, in __init__
+    self._create_worker_process(i)
+[2019-01-19 13:46:57,869: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2019-01-19 13:46:57,869: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1007, in __init__
+    self._create_worker_process(i)
+[2019-01-19 13:46:57,870: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2019-01-19 13:46:57,870: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 449, in _create_worker_process
+    return super(AsynPool, self)._create_worker_process(i)
+[2019-01-19 13:46:57,870: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2019-01-19 13:46:57,870: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 449, in _create_worker_process
+    return super(AsynPool, self)._create_worker_process(i)
+[2019-01-19 13:46:57,871: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2019-01-19 13:46:57,871: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2019-01-19 13:46:57,871: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1116, in _create_worker_process
+    w.start()
+[2019-01-19 13:46:57,871: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1116, in _create_worker_process
+    w.start()
+[2019-01-19 13:46:57,871: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2019-01-19 13:46:57,872: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2019-01-19 13:46:57,872: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2019-01-19 13:46:57,872: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2019-01-19 13:46:57,872: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2019-01-19 13:46:57,872: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2019-01-19 13:46:57,872: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2019-01-19 13:46:57,873: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2019-01-19 13:46:57,873: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2019-01-19 13:46:57,873: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2019-01-19 13:46:57,873: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2019-01-19 13:46:57,874: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2019-01-19 13:46:57,874: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2019-01-19 13:46:57,874: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2019-01-19 13:46:57,874: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2019-01-19 13:46:57,874: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2019-01-19 13:46:57,874: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2019-01-19 13:46:57,875: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 358, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2019-01-19 13:46:57,875: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2019-01-19 13:46:57,875: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 358, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2019-01-19 13:46:57,875: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2019-01-19 13:46:57,875: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 549, in _fast_trace_task
+    uuid, args, kwargs, request,
+[2019-01-19 13:46:57,876: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2019-01-19 13:46:57,876: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 549, in _fast_trace_task
+    uuid, args, kwargs, request,
+[2019-01-19 13:46:57,876: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2019-01-19 13:46:57,876: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2019-01-19 13:46:57,876: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2019-01-19 13:46:57,877: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2019-01-19 13:46:57,877: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+[2019-01-19 13:46:57,878: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 358, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2019-01-19 13:46:57,877: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 358, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2019-01-19 13:46:57,878: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/DreamTV_world/tasks.py", line 161, in task_parse_url
+    logger.info(key, slug)
+[2019-01-19 13:46:57,877: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2019-01-19 13:46:57,878: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 549, in _fast_trace_task
+    uuid, args, kwargs, request,
+[2019-01-19 13:46:57,879: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 549, in _fast_trace_task
+    uuid, args, kwargs, request,
+[2019-01-19 13:46:57,879: WARNING/ForkPoolWorker-1] Message: 'LgPWgqVGanA'
+Arguments: ('10-websites-you-can-make-100-a-day-from-online-no-special-skills',)
+[2019-01-19 13:46:57,879: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2019-01-19 13:46:57,879: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2019-01-19 13:46:57,880: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+[2019-01-19 13:46:57,880: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+[2019-01-19 13:46:57,879: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+[2019-01-19 13:46:57,881: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/DreamTV_world/tasks.py", line 161, in task_parse_url
+    logger.info(key, slug)
+[2019-01-19 13:46:57,881: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/DreamTV_world/tasks.py", line 161, in task_parse_url
+    logger.info(key, slug)
+[2019-01-19 13:46:57,881: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/DreamTV_world/tasks.py", line 161, in task_parse_url
+    logger.info(key, slug)
+[2019-01-19 13:46:57,881: WARNING/ForkPoolWorker-2] Message: 'LgPWgqVGanA'
+Arguments: ('10-websites-you-can-make-100-a-day-from-online-no-special-skills',)
+[2019-01-19 13:46:57,882: WARNING/ForkPoolWorker-3] Message: 'LgPWgqVGanA'
+Arguments: ('10-websites-you-can-make-100-a-day-from-online-no-special-skills',)
+[2019-01-19 13:46:57,882: WARNING/ForkPoolWorker-4] Message: 'LgPWgqVGanA'
+Arguments: ('10-websites-you-can-make-100-a-day-from-online-no-special-skills',)
+[2019-01-19 13:46:57,942: WARNING/ForkPoolWorker-1] /Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+  warnings.warn('Selenium support for PhantomJS has been deprecated, please use headless '
+[2019-01-19 13:46:57,953: WARNING/ForkPoolWorker-3] /Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+  warnings.warn('Selenium support for PhantomJS has been deprecated, please use headless '
+[2019-01-19 13:46:58,004: WARNING/ForkPoolWorker-2] /Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+  warnings.warn('Selenium support for PhantomJS has been deprecated, please use headless '
+[2019-01-19 13:46:58,041: WARNING/ForkPoolWorker-4] /Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+  warnings.warn('Selenium support for PhantomJS has been deprecated, please use headless '
+[2019-01-19 13:47:11,031: DEBUG/ForkPoolWorker-1] POST http://127.0.0.1:63587/wd/hub/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "phantomjs", "platformName": "any"}}, "desiredCapabilities": {"browserName": "phantomjs", "version": "", "platform": "ANY", "javascriptEnabled": true, "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.1 Safari/537.36"}}
+[2019-01-19 13:47:11,035: DEBUG/ForkPoolWorker-1] Starting new HTTP connection (1): 127.0.0.1:63587
+[2019-01-19 13:47:11,068: DEBUG/ForkPoolWorker-1] http://127.0.0.1:63587 "POST /wd/hub/session HTTP/1.1" 200 692
+[2019-01-19 13:47:11,071: DEBUG/ForkPoolWorker-1] Finished Request
+[2019-01-19 13:47:11,073: DEBUG/ForkPoolWorker-1] POST http://127.0.0.1:63587/wd/hub/session/f4d111b0-1bdf-11e9-b0c9-0773c81d7568/url {"url": "https://playtube.pk/watch?v=LgPWgqVGanA", "sessionId": "f4d111b0-1bdf-11e9-b0c9-0773c81d7568"}
+[2019-01-19 13:47:11,075: DEBUG/ForkPoolWorker-1] Starting new HTTP connection (1): 127.0.0.1:63587
+[2019-01-19 13:47:11,082: DEBUG/ForkPoolWorker-3] POST http://127.0.0.1:63590/wd/hub/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "phantomjs", "platformName": "any"}}, "desiredCapabilities": {"browserName": "phantomjs", "version": "", "platform": "ANY", "javascriptEnabled": true, "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.1 Safari/537.36"}}
+[2019-01-19 13:47:11,086: DEBUG/ForkPoolWorker-3] Starting new HTTP connection (1): 127.0.0.1:63590
+[2019-01-19 13:47:11,100: DEBUG/ForkPoolWorker-2] POST http://127.0.0.1:63593/wd/hub/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "phantomjs", "platformName": "any"}}, "desiredCapabilities": {"browserName": "phantomjs", "version": "", "platform": "ANY", "javascriptEnabled": true, "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.1 Safari/537.36"}}
+[2019-01-19 13:47:11,104: DEBUG/ForkPoolWorker-2] Starting new HTTP connection (1): 127.0.0.1:63593
+[2019-01-19 13:47:11,118: DEBUG/ForkPoolWorker-3] http://127.0.0.1:63590 "POST /wd/hub/session HTTP/1.1" 200 692
+[2019-01-19 13:47:11,121: DEBUG/ForkPoolWorker-3] Finished Request
+[2019-01-19 13:47:11,123: DEBUG/ForkPoolWorker-3] POST http://127.0.0.1:63590/wd/hub/session/f4d8d9e0-1bdf-11e9-96f5-f9523b2818d9/url {"url": "https://kingtradeguide.com/index.php/blog/freelance-writing/", "sessionId": "f4d8d9e0-1bdf-11e9-96f5-f9523b2818d9"}
+[2019-01-19 13:47:11,124: DEBUG/ForkPoolWorker-3] Starting new HTTP connection (1): 127.0.0.1:63590
+[2019-01-19 13:47:11,138: DEBUG/ForkPoolWorker-2] http://127.0.0.1:63593 "POST /wd/hub/session HTTP/1.1" 200 692
+[2019-01-19 13:47:11,140: DEBUG/ForkPoolWorker-2] Finished Request
+[2019-01-19 13:47:11,142: DEBUG/ForkPoolWorker-2] POST http://127.0.0.1:63593/wd/hub/session/f4dbc010-1bdf-11e9-bdfa-1d35378d5c99/url {"url": "https://khothuthuat.com/video-clip-thu-thuat/may-tinh/video-huong-dan-don-rac-may-tinh-bang-ccleaner-2247/?xem_video=LgPWgqVGanA", "sessionId": "f4dbc010-1bdf-11e9-bdfa-1d35378d5c99"}
+[2019-01-19 13:47:11,144: DEBUG/ForkPoolWorker-2] Starting new HTTP connection (1): 127.0.0.1:63593
+[2019-01-19 13:47:11,176: DEBUG/ForkPoolWorker-4] POST http://127.0.0.1:63596/wd/hub/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "phantomjs", "platformName": "any"}}, "desiredCapabilities": {"browserName": "phantomjs", "version": "", "platform": "ANY", "javascriptEnabled": true, "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.1 Safari/537.36"}}
+[2019-01-19 13:47:11,180: DEBUG/ForkPoolWorker-4] Starting new HTTP connection (1): 127.0.0.1:63596
+[2019-01-19 13:47:11,214: DEBUG/ForkPoolWorker-4] http://127.0.0.1:63596 "POST /wd/hub/session HTTP/1.1" 200 692
+[2019-01-19 13:47:11,216: DEBUG/ForkPoolWorker-4] Finished Request
+[2019-01-19 13:47:11,218: DEBUG/ForkPoolWorker-4] POST http://127.0.0.1:63596/wd/hub/session/f4e731c0-1bdf-11e9-a384-aff61c685745/url {"url": "https://nicktube.net/watch?v=LgPWgqVGanA", "sessionId": "f4e731c0-1bdf-11e9-a384-aff61c685745"}
+[2019-01-19 13:47:11,220: DEBUG/ForkPoolWorker-4] Starting new HTTP connection (1): 127.0.0.1:63596
+[2019-01-19 13:47:12,242: DEBUG/MainProcess] | Worker: Closing Hub...
+[2019-01-19 13:47:12,243: DEBUG/MainProcess] | Worker: Closing Pool...
+[2019-01-19 13:47:12,243: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2019-01-19 13:47:12,243: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2019-01-19 13:47:12,244: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2019-01-19 13:47:12,244: DEBUG/MainProcess] | Consumer: Closing Events...
+[2019-01-19 13:47:12,244: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2019-01-19 13:47:12,245: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2019-01-19 13:47:12,245: DEBUG/MainProcess] | Consumer: Closing Control...
+[2019-01-19 13:47:12,245: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2019-01-19 13:47:12,245: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2019-01-19 13:47:12,246: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2019-01-19 13:47:12,246: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2019-01-19 13:47:12,246: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2019-01-19 13:47:12,248: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2019-01-19 13:47:12,260: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2019-01-19 13:47:12,265: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2019-01-19 13:47:12,265: DEBUG/MainProcess] Canceling task consumer...
+[2019-01-19 13:47:12,266: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2019-01-19 13:47:12,266: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2019-01-19 13:47:12,266: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2019-01-19 13:47:12,266: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2019-01-19 13:47:12,268: ERROR/MainProcess] Error on stopping Pool: TypeError("can't pickle _thread.lock objects")
+Traceback (most recent call last):
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 317, in start
+    blueprint.start(self)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 593, in start
+    c.loop(*c.loop_args())
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/loops.py", line 91, in asynloop
+    next(loop)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/kombu/asynchronous/hub.py", line 298, in create_loop
+    events = poll(poll_timeout)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/kombu/utils/eventio.py", line 217, in poll
+    event_list = self._quick_poll(timeout)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/apps/worker.py", line 284, in _handle_request
+    raise exc(exitcode)
+celery.exceptions.WorkerShutdown: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 151, in send_all
+    fun(parent, *args)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 373, in stop
+    return self.obj.stop()
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 122, in stop
+    self.on_stop()
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 140, in on_stop
+    self._pool.join()
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1578, in join
+    stop_if_not_current(self._result_handler)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 143, in stop_if_not_current
+    thread.stop(timeout)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 500, in stop
+    self.on_stop_not_started()
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 332, in on_stop_not_started
+    check_timeouts()
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 744, in handle_event
+    next(self._it)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 697, in handle_timeouts
+    cache = copy.deepcopy(self.cache)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 150, in deepcopy
+    y = copier(x, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 240, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 180, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 280, in _reconstruct
+    state = deepcopy(state, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 150, in deepcopy
+    y = copier(x, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 240, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 180, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 280, in _reconstruct
+    state = deepcopy(state, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 150, in deepcopy
+    y = copier(x, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 240, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 180, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 280, in _reconstruct
+    state = deepcopy(state, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 150, in deepcopy
+    y = copier(x, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 240, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 169, in deepcopy
+    rv = reductor(4)
+TypeError: can't pickle _thread.lock objects
+[2019-01-19 13:47:12,283: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2019-01-19 13:47:12,284: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2019-01-19 13:47:12,284: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2019-01-19 13:47:12,285: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2019-01-19 13:47:12,285: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2019-01-19 13:47:12,285: DEBUG/MainProcess] Canceling task consumer...
+[2019-01-19 13:47:12,285: DEBUG/MainProcess] Closing consumer channel...
+[2019-01-19 13:47:12,286: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2019-01-19 13:47:12,287: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2019-01-19 13:47:12,287: WARNING/MainProcess] Restoring 16 unacknowledged message(s)
+[2019-01-19 13:47:12,316: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2019-01-19 13:48:14,318: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2019-01-19 13:48:14,322: DEBUG/MainProcess] | Worker: Building graph...
+[2019-01-19 13:48:14,322: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Beat, Timer, Hub, Pool, Autoscaler, Consumer}
+[2019-01-19 13:48:14,348: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2019-01-19 13:48:14,348: DEBUG/MainProcess] | Consumer: Building graph...
+[2019-01-19 13:48:14,381: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Agent, Events, Heart, Mingle, Tasks, Control, Gossip, event loop}
+[2019-01-19 13:48:14,416: DEBUG/MainProcess] | Worker: Starting Hub
+[2019-01-19 13:48:14,417: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:48:14,417: DEBUG/MainProcess] | Worker: Starting Pool
+[2019-01-19 13:48:14,661: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:48:14,662: DEBUG/MainProcess] | Worker: Starting Consumer
+[2019-01-19 13:48:14,662: DEBUG/MainProcess] | Consumer: Starting Connection
+[2019-01-19 13:48:14,683: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2019-01-19 13:48:14,684: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:48:14,684: DEBUG/MainProcess] | Consumer: Starting Events
+[2019-01-19 13:48:14,698: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:48:14,698: DEBUG/MainProcess] | Consumer: Starting Heart
+[2019-01-19 13:48:14,701: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:48:14,702: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2019-01-19 13:48:14,702: INFO/MainProcess] mingle: searching for neighbors
+[2019-01-19 13:48:15,738: INFO/MainProcess] mingle: all alone
+[2019-01-19 13:48:15,739: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:48:15,739: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2019-01-19 13:48:15,750: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:48:15,750: DEBUG/MainProcess] | Consumer: Starting Control
+[2019-01-19 13:48:15,757: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:48:15,757: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2019-01-19 13:48:15,764: DEBUG/MainProcess] ^-- substep ok
+[2019-01-19 13:48:15,764: DEBUG/MainProcess] | Consumer: Starting event loop
+[2019-01-19 13:48:15,765: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2019-01-19 13:48:15,768: WARNING/MainProcess] /Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-01-19 13:48:15,768: INFO/MainProcess] celery@MacBook-Pro-Aleksej-2.local ready.
+[2019-01-19 13:48:15,769: DEBUG/MainProcess] basic.qos: prefetch_count->16
+[2019-01-19 13:48:15,883: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[cb309227-b4cd-466f-b8cd-68829b35a8f2]  
+[2019-01-19 13:48:15,884: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10aca6488> (args:('DreamTV_world.tasks.task_parse_url', 'cb309227-b4cd-466f-b8cd-68829b35a8f2', {'lang': 'py', 'task': 'DreamTV_world.tasks.task_parse_url', 'id': 'cb309227-b4cd-466f-b8cd-68829b35a8f2', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'cb309227-b4cd-466f-b8cd-68829b35a8f2', 'parent_id': None, 'argsrepr': "('LgPWgqVGanA', '10-websites-you-can-make-100-a-day-from-online-no-special-skills', 'http://seen.lk/watch/LgPWgqVGanA')", 'kwargsrepr': '{}', 'origin': 'gen13109@MacBook-Pro-Aleksej-2.local', 'redelivered': True, 'reply_to': '215cf582-06aa-3039-9b8c-0ad85b73ff8e', 'correlation_id': 'cb309227-b4cd-466f-b8cd-68829b35a8f2', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["LgPWgqVGanA", "10-websites-you-can-make-100-a-day-from-online-no-special-skills", "http://seen.lk/watch/LgPWgqVGanA"], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2019-01-19 13:48:15,887: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[2752b710-b1b0-45f0-8e27-1436507b834f]  
+[2019-01-19 13:48:15,887: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10aca6488> (args:('DreamTV_world.tasks.task_parse_url', '2752b710-b1b0-45f0-8e27-1436507b834f', {'lang': 'py', 'task': 'DreamTV_world.tasks.task_parse_url', 'id': '2752b710-b1b0-45f0-8e27-1436507b834f', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '2752b710-b1b0-45f0-8e27-1436507b834f', 'parent_id': None, 'argsrepr': "('LgPWgqVGanA', '10-websites-you-can-make-100-a-day-from-online-no-special-skills', 'http://www.fetgame.com/wp-admin/10-websites-you-can~LgPWgqVGanA')", 'kwargsrepr': '{}', 'origin': 'gen13109@MacBook-Pro-Aleksej-2.local', 'redelivered': True, 'reply_to': '215cf582-06aa-3039-9b8c-0ad85b73ff8e', 'correlation_id': '2752b710-b1b0-45f0-8e27-1436507b834f', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["LgPWgqVGanA", "10-websites-you-can-make-100-a-day-from-online-no-special-skills", "http://www.fetgame.com/wp-admin/10-websites-you-can~LgPWgqVGanA"], {}, {"callbacks": null, "errbacks": null,... kwargs:{})
+[2019-01-19 13:48:15,890: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[f96010e5-1ea9-430f-b437-eb10001d500c]  
+[2019-01-19 13:48:15,890: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10aca6488> (args:('DreamTV_world.tasks.task_parse_url', 'f96010e5-1ea9-430f-b437-eb10001d500c', {'lang': 'py', 'task': 'DreamTV_world.tasks.task_parse_url', 'id': 'f96010e5-1ea9-430f-b437-eb10001d500c', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'f96010e5-1ea9-430f-b437-eb10001d500c', 'parent_id': None, 'argsrepr': "('LgPWgqVGanA', '10-websites-you-can-make-100-a-day-from-online-no-special-skills', 'https://namvideo.com/watch/T74QISeCr6Q')", 'kwargsrepr': '{}', 'origin': 'gen13109@MacBook-Pro-Aleksej-2.local', 'redelivered': True, 'reply_to': '215cf582-06aa-3039-9b8c-0ad85b73ff8e', 'correlation_id': 'f96010e5-1ea9-430f-b437-eb10001d500c', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["LgPWgqVGanA", "10-websites-you-can-make-100-a-day-from-online-no-special-skills", "https://namvideo.com/watch/T74QISeCr6Q"], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json',... kwargs:{})
+[2019-01-19 13:48:15,891: DEBUG/MainProcess] Task accepted: DreamTV_world.tasks.task_parse_url[cb309227-b4cd-466f-b8cd-68829b35a8f2] pid:13319
+[2019-01-19 13:48:15,894: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[1ff7122a-e9a6-4d75-a760-e86e5cf71ab3]  
+[2019-01-19 13:48:15,895: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10aca6488> (args:('DreamTV_world.tasks.task_parse_url', '1ff7122a-e9a6-4d75-a760-e86e5cf71ab3', {'lang': 'py', 'task': 'DreamTV_world.tasks.task_parse_url', 'id': '1ff7122a-e9a6-4d75-a760-e86e5cf71ab3', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '1ff7122a-e9a6-4d75-a760-e86e5cf71ab3', 'parent_id': None, 'argsrepr': "('LgPWgqVGanA', '10-websites-you-can-make-100-a-day-from-online-no-special-skills', 'https://cpeda.space/post/429591/')", 'kwargsrepr': '{}', 'origin': 'gen13109@MacBook-Pro-Aleksej-2.local', 'redelivered': True, 'reply_to': '215cf582-06aa-3039-9b8c-0ad85b73ff8e', 'correlation_id': '1ff7122a-e9a6-4d75-a760-e86e5cf71ab3', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["LgPWgqVGanA", "10-websites-you-can-make-100-a-day-from-online-no-special-skills", "https://cpeda.space/post/429591/"], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2019-01-19 13:48:15,895: DEBUG/MainProcess] Task accepted: DreamTV_world.tasks.task_parse_url[2752b710-b1b0-45f0-8e27-1436507b834f] pid:13322
+[2019-01-19 13:48:15,899: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[1ceee281-48a2-4064-a827-dcbd5ad8e56d]  
+[2019-01-19 13:48:15,899: DEBUG/MainProcess] Task accepted: DreamTV_world.tasks.task_parse_url[1ff7122a-e9a6-4d75-a760-e86e5cf71ab3] pid:13320
+[2019-01-19 13:48:15,900: DEBUG/MainProcess] Task accepted: DreamTV_world.tasks.task_parse_url[f96010e5-1ea9-430f-b437-eb10001d500c] pid:13321
+[2019-01-19 13:48:15,900: WARNING/ForkPoolWorker-1] --- Logging error ---
+[2019-01-19 13:48:15,903: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[a31ceb67-d6a7-4a4a-abcb-4e60463ecd68]  
+[2019-01-19 13:48:15,903: WARNING/ForkPoolWorker-4] --- Logging error ---
+[2019-01-19 13:48:15,906: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[ef8d602e-890c-4713-9d06-c2c0196b7764]  
+[2019-01-19 13:48:15,908: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[a580e117-9f4c-4e13-a12f-65120ea24e33]  
+[2019-01-19 13:48:15,907: WARNING/ForkPoolWorker-1] Traceback (most recent call last):
+[2019-01-19 13:48:15,908: WARNING/ForkPoolWorker-4] Traceback (most recent call last):
+[2019-01-19 13:48:15,908: WARNING/ForkPoolWorker-1] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 983, in emit
+    msg = self.format(record)
+[2019-01-19 13:48:15,909: WARNING/ForkPoolWorker-4] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 983, in emit
+    msg = self.format(record)
+[2019-01-19 13:48:15,909: WARNING/ForkPoolWorker-1] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 829, in format
+    return fmt.format(record)
+[2019-01-19 13:48:15,910: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[bb15447d-3e62-4df1-bb54-a38e980b53bf]  
+[2019-01-19 13:48:15,910: WARNING/ForkPoolWorker-4] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 829, in format
+    return fmt.format(record)
+[2019-01-19 13:48:15,910: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/log.py", line 46, in format
+    return ColorFormatter.format(self, record)
+[2019-01-19 13:48:15,911: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/log.py", line 46, in format
+    return ColorFormatter.format(self, record)
+[2019-01-19 13:48:15,911: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/utils/log.py", line 153, in format
+    msg = logging.Formatter.format(self, record)
+[2019-01-19 13:48:15,912: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[289d05b0-a72e-478c-b583-c2172a5a6f7c]  
+[2019-01-19 13:48:15,912: WARNING/ForkPoolWorker-1] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 569, in format
+    record.message = record.getMessage()
+[2019-01-19 13:48:15,912: WARNING/ForkPoolWorker-2] --- Logging error ---
+[2019-01-19 13:48:15,913: WARNING/ForkPoolWorker-1] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 331, in getMessage
+    msg = msg % self.args
+[2019-01-19 13:48:15,913: WARNING/ForkPoolWorker-1] TypeError: not all arguments converted during string formatting
+[2019-01-19 13:48:15,914: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[4a3934a2-c982-4310-a3f0-e8fffc7ee385]  
+[2019-01-19 13:48:15,914: WARNING/ForkPoolWorker-1] Call stack:
+[2019-01-19 13:48:15,915: WARNING/ForkPoolWorker-3] --- Logging error ---
+[2019-01-19 13:48:15,916: WARNING/ForkPoolWorker-2] Traceback (most recent call last):
+[2019-01-19 13:48:15,917: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[c0aa1073-c5d3-4b71-8d28-b330379bde94]  
+[2019-01-19 13:48:15,917: WARNING/ForkPoolWorker-2] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 983, in emit
+    msg = self.format(record)
+[2019-01-19 13:48:15,918: WARNING/ForkPoolWorker-2] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 829, in format
+    return fmt.format(record)
+[2019-01-19 13:48:15,919: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[e3a8f600-2e68-41c4-8b75-679af7381948]  
+[2019-01-19 13:48:15,919: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/log.py", line 46, in format
+    return ColorFormatter.format(self, record)
+[2019-01-19 13:48:15,919: WARNING/ForkPoolWorker-3] Traceback (most recent call last):
+[2019-01-19 13:48:15,919: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/utils/log.py", line 153, in format
+    msg = logging.Formatter.format(self, record)
+[2019-01-19 13:48:15,920: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 983, in emit
+    msg = self.format(record)
+[2019-01-19 13:48:15,920: WARNING/ForkPoolWorker-2] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 569, in format
+    record.message = record.getMessage()
+[2019-01-19 13:48:15,921: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[62765324-b1d5-499b-b638-b5a4b919df03]  
+[2019-01-19 13:48:15,921: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 829, in format
+    return fmt.format(record)
+[2019-01-19 13:48:15,921: WARNING/ForkPoolWorker-2] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 331, in getMessage
+    msg = msg % self.args
+[2019-01-19 13:48:15,922: WARNING/ForkPoolWorker-2] TypeError: not all arguments converted during string formatting
+[2019-01-19 13:48:15,923: WARNING/ForkPoolWorker-2] Call stack:
+[2019-01-19 13:48:15,924: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[b193cd42-eab2-4296-b2b7-5cd30cf88c2b]  
+[2019-01-19 13:48:15,926: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[cfb6a3d5-e5ab-4cde-966f-4d0885ee4e1d]  
+[2019-01-19 13:48:15,929: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[dbd9344f-1c16-4a51-8f1f-207275ae1e61]  
+[2019-01-19 13:48:15,931: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[de0c7037-f725-416d-a9cc-03d08b3c3a00]  
+[2019-01-19 13:48:15,933: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[74b63111-b6eb-46a5-832c-7993852126c4]  
+[2019-01-19 13:48:15,935: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[e29b4a88-905c-45ad-ade7-a63637642de9]  
+[2019-01-19 13:48:15,912: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/utils/log.py", line 153, in format
+    msg = logging.Formatter.format(self, record)
+[2019-01-19 13:48:15,937: WARNING/ForkPoolWorker-4] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 569, in format
+    record.message = record.getMessage()
+[2019-01-19 13:48:15,937: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/bin/celery", line 11, in <module>
+    sys.exit(main())
+[2019-01-19 13:48:15,938: WARNING/ForkPoolWorker-4] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 331, in getMessage
+    msg = msg % self.args
+[2019-01-19 13:48:15,938: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+[2019-01-19 13:48:15,939: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+[2019-01-19 13:48:15,939: WARNING/ForkPoolWorker-4] TypeError: not all arguments converted during string formatting
+[2019-01-19 13:48:15,937: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/log.py", line 46, in format
+    return ColorFormatter.format(self, record)
+[2019-01-19 13:48:15,939: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+[2019-01-19 13:48:15,940: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 275, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+[2019-01-19 13:48:15,940: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/utils/log.py", line 153, in format
+    msg = logging.Formatter.format(self, record)
+[2019-01-19 13:48:15,941: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 488, in handle_argv
+    return self.execute(command, argv)
+[2019-01-19 13:48:15,941: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 569, in format
+    record.message = record.getMessage()
+[2019-01-19 13:48:15,939: WARNING/ForkPoolWorker-4] Call stack:
+[2019-01-19 13:48:15,941: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 420, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+[2019-01-19 13:48:15,942: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+[2019-01-19 13:48:15,943: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 238, in __call__
+    ret = self.run(*args, **kwargs)
+[2019-01-19 13:48:15,944: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    worker.start()
+[2019-01-19 13:48:15,941: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 331, in getMessage
+    msg = msg % self.args
+[2019-01-19 13:48:15,944: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+[2019-01-19 13:48:15,945: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+[2019-01-19 13:48:15,946: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+[2019-01-19 13:48:15,947: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 131, in start
+    self.on_start()
+[2019-01-19 13:48:15,947: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 112, in on_start
+    **self.options)
+[2019-01-19 13:48:15,948: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 432, in __init__
+    super(AsynPool, self).__init__(processes, *args, **kwargs)
+[2019-01-19 13:48:15,949: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1007, in __init__
+    self._create_worker_process(i)
+[2019-01-19 13:48:15,945: WARNING/ForkPoolWorker-3] TypeError: not all arguments converted during string formatting
+[2019-01-19 13:48:15,955: WARNING/ForkPoolWorker-3] Call stack:
+[2019-01-19 13:48:15,976: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/bin/celery", line 11, in <module>
+    sys.exit(main())
+[2019-01-19 13:48:15,976: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/bin/celery", line 11, in <module>
+    sys.exit(main())
+[2019-01-19 13:48:15,977: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+[2019-01-19 13:48:15,977: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+[2019-01-19 13:48:15,978: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+[2019-01-19 13:48:15,978: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+[2019-01-19 13:48:15,979: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+[2019-01-19 13:48:15,979: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+[2019-01-19 13:48:15,980: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 275, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+[2019-01-19 13:48:15,980: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 275, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+[2019-01-19 13:48:15,981: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 488, in handle_argv
+    return self.execute(command, argv)
+[2019-01-19 13:48:15,981: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 488, in handle_argv
+    return self.execute(command, argv)
+[2019-01-19 13:48:15,981: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 420, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+[2019-01-19 13:48:15,981: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 420, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+[2019-01-19 13:48:15,982: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/bin/celery", line 11, in <module>
+    sys.exit(main())
+[2019-01-19 13:48:15,982: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+[2019-01-19 13:48:15,982: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+[2019-01-19 13:48:15,983: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+[2019-01-19 13:48:15,983: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 238, in __call__
+    ret = self.run(*args, **kwargs)
+[2019-01-19 13:48:15,983: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 238, in __call__
+    ret = self.run(*args, **kwargs)
+[2019-01-19 13:48:15,984: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+[2019-01-19 13:48:15,984: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    worker.start()
+[2019-01-19 13:48:15,984: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    worker.start()
+[2019-01-19 13:48:15,984: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+[2019-01-19 13:48:15,985: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+[2019-01-19 13:48:15,985: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+[2019-01-19 13:48:15,985: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 275, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+[2019-01-19 13:48:15,985: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+[2019-01-19 13:48:15,986: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+[2019-01-19 13:48:15,986: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 488, in handle_argv
+    return self.execute(command, argv)
+[2019-01-19 13:48:15,986: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+[2019-01-19 13:48:15,987: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+[2019-01-19 13:48:15,987: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 420, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+[2019-01-19 13:48:15,987: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 131, in start
+    self.on_start()
+[2019-01-19 13:48:15,987: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 131, in start
+    self.on_start()
+[2019-01-19 13:48:15,988: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 112, in on_start
+    **self.options)
+[2019-01-19 13:48:15,988: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 112, in on_start
+    **self.options)
+[2019-01-19 13:48:15,989: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 432, in __init__
+    super(AsynPool, self).__init__(processes, *args, **kwargs)
+[2019-01-19 13:48:15,989: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 432, in __init__
+    super(AsynPool, self).__init__(processes, *args, **kwargs)
+[2019-01-19 13:48:15,989: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1007, in __init__
+    self._create_worker_process(i)
+[2019-01-19 13:48:15,990: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1007, in __init__
+    self._create_worker_process(i)
+[2019-01-19 13:48:15,990: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 449, in _create_worker_process
+    return super(AsynPool, self)._create_worker_process(i)
+[2019-01-19 13:48:15,991: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 449, in _create_worker_process
+    return super(AsynPool, self)._create_worker_process(i)
+[2019-01-19 13:48:15,992: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1116, in _create_worker_process
+    w.start()
+[2019-01-19 13:48:15,993: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2019-01-19 13:48:15,991: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1116, in _create_worker_process
+    w.start()
+[2019-01-19 13:48:15,994: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2019-01-19 13:48:15,995: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2019-01-19 13:48:15,996: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2019-01-19 13:48:15,997: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2019-01-19 13:48:15,998: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2019-01-19 13:48:15,998: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2019-01-19 13:48:15,999: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2019-01-19 13:48:16,000: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 358, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2019-01-19 13:48:16,001: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 549, in _fast_trace_task
+    uuid, args, kwargs, request,
+[2019-01-19 13:48:16,002: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2019-01-19 13:48:16,003: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+[2019-01-19 13:48:15,950: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 449, in _create_worker_process
+    return super(AsynPool, self)._create_worker_process(i)
+[2019-01-19 13:48:16,005: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1116, in _create_worker_process
+    w.start()
+[2019-01-19 13:48:16,006: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2019-01-19 13:48:15,988: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+[2019-01-19 13:48:16,006: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2019-01-19 13:48:16,009: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2019-01-19 13:48:16,009: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 238, in __call__
+    ret = self.run(*args, **kwargs)
+[2019-01-19 13:48:16,010: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2019-01-19 13:48:16,010: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    worker.start()
+[2019-01-19 13:48:16,011: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2019-01-19 13:48:16,011: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+[2019-01-19 13:48:16,011: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2019-01-19 13:48:16,012: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+[2019-01-19 13:48:16,012: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2019-01-19 13:48:16,013: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+[2019-01-19 13:48:16,013: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 131, in start
+    self.on_start()
+[2019-01-19 13:48:16,014: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 112, in on_start
+    **self.options)
+[2019-01-19 13:48:16,015: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 432, in __init__
+    super(AsynPool, self).__init__(processes, *args, **kwargs)
+[2019-01-19 13:48:16,016: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1007, in __init__
+    self._create_worker_process(i)
+[2019-01-19 13:48:16,020: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 449, in _create_worker_process
+    return super(AsynPool, self)._create_worker_process(i)
+[2019-01-19 13:48:16,013: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 358, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2019-01-19 13:48:16,021: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1116, in _create_worker_process
+    w.start()
+[2019-01-19 13:48:16,026: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 549, in _fast_trace_task
+    uuid, args, kwargs, request,
+[2019-01-19 13:48:16,027: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2019-01-19 13:48:16,028: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+[2019-01-19 13:48:16,029: WARNING/ForkPoolWorker-1] File "/Users/mymac/PycharmProjects/DreamTV_world/DreamTV_world/tasks.py", line 161, in task_parse_url
+    logger.info(key, slug)
+[2019-01-19 13:48:15,993: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2019-01-19 13:48:16,030: WARNING/ForkPoolWorker-1] Message: 'LgPWgqVGanA'
+Arguments: ('10-websites-you-can-make-100-a-day-from-online-no-special-skills',)
+[2019-01-19 13:48:16,030: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2019-01-19 13:48:16,031: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2019-01-19 13:48:16,032: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2019-01-19 13:48:16,033: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2019-01-19 13:48:16,027: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2019-01-19 13:48:16,034: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2019-01-19 13:48:16,034: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2019-01-19 13:48:16,035: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 358, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2019-01-19 13:48:16,035: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2019-01-19 13:48:16,036: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 549, in _fast_trace_task
+    uuid, args, kwargs, request,
+[2019-01-19 13:48:16,036: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2019-01-19 13:48:16,037: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2019-01-19 13:48:16,037: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2019-01-19 13:48:16,038: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+[2019-01-19 13:48:16,038: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2019-01-19 13:48:16,038: WARNING/ForkPoolWorker-4] File "/Users/mymac/PycharmProjects/DreamTV_world/DreamTV_world/tasks.py", line 161, in task_parse_url
+    logger.info(key, slug)
+[2019-01-19 13:48:16,039: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2019-01-19 13:48:16,040: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 358, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2019-01-19 13:48:16,041: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 549, in _fast_trace_task
+    uuid, args, kwargs, request,
+[2019-01-19 13:48:16,042: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2019-01-19 13:48:16,003: WARNING/ForkPoolWorker-2] File "/Users/mymac/PycharmProjects/DreamTV_world/DreamTV_world/tasks.py", line 161, in task_parse_url
+    logger.info(key, slug)
+[2019-01-19 13:48:16,049: WARNING/ForkPoolWorker-2] Message: 'LgPWgqVGanA'
+Arguments: ('10-websites-you-can-make-100-a-day-from-online-no-special-skills',)
+[2019-01-19 13:48:16,039: WARNING/ForkPoolWorker-4] Message: 'LgPWgqVGanA'
+Arguments: ('10-websites-you-can-make-100-a-day-from-online-no-special-skills',)
+[2019-01-19 13:48:16,043: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+[2019-01-19 13:48:16,104: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/DreamTV_world/tasks.py", line 161, in task_parse_url
+    logger.info(key, slug)
+[2019-01-19 13:48:16,105: WARNING/ForkPoolWorker-3] Message: 'LgPWgqVGanA'
+Arguments: ('10-websites-you-can-make-100-a-day-from-online-no-special-skills',)
+[2019-01-19 13:48:16,173: WARNING/ForkPoolWorker-1] /Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+  warnings.warn('Selenium support for PhantomJS has been deprecated, please use headless '
+[2019-01-19 13:48:16,180: WARNING/ForkPoolWorker-2] /Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+  warnings.warn('Selenium support for PhantomJS has been deprecated, please use headless '
+[2019-01-19 13:48:16,203: WARNING/ForkPoolWorker-4] /Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+  warnings.warn('Selenium support for PhantomJS has been deprecated, please use headless '
+[2019-01-19 13:48:16,231: WARNING/ForkPoolWorker-3] --- Logging error ---
+[2019-01-19 13:48:16,232: WARNING/ForkPoolWorker-3] Traceback (most recent call last):
+[2019-01-19 13:48:16,233: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 983, in emit
+    msg = self.format(record)
+[2019-01-19 13:48:16,234: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 829, in format
+    return fmt.format(record)
+[2019-01-19 13:48:16,234: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/log.py", line 46, in format
+    return ColorFormatter.format(self, record)
+[2019-01-19 13:48:16,235: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/utils/log.py", line 153, in format
+    msg = logging.Formatter.format(self, record)
+[2019-01-19 13:48:16,236: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 569, in format
+    record.message = record.getMessage()
+[2019-01-19 13:48:16,237: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 331, in getMessage
+    msg = msg % self.args
+[2019-01-19 13:48:16,238: WARNING/ForkPoolWorker-3] TypeError: not all arguments converted during string formatting
+[2019-01-19 13:48:16,238: WARNING/ForkPoolWorker-3] Call stack:
+[2019-01-19 13:48:16,243: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/bin/celery", line 11, in <module>
+    sys.exit(main())
+[2019-01-19 13:48:16,244: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+[2019-01-19 13:48:16,244: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+[2019-01-19 13:48:16,245: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+[2019-01-19 13:48:16,246: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 275, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+[2019-01-19 13:48:16,247: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 488, in handle_argv
+    return self.execute(command, argv)
+[2019-01-19 13:48:16,248: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 420, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+[2019-01-19 13:48:16,249: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+[2019-01-19 13:48:16,249: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 238, in __call__
+    ret = self.run(*args, **kwargs)
+[2019-01-19 13:48:16,251: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    worker.start()
+[2019-01-19 13:48:16,267: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+[2019-01-19 13:48:16,268: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+[2019-01-19 13:48:16,269: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+[2019-01-19 13:48:16,271: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 131, in start
+    self.on_start()
+[2019-01-19 13:48:16,275: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 112, in on_start
+    **self.options)
+[2019-01-19 13:48:16,277: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 432, in __init__
+    super(AsynPool, self).__init__(processes, *args, **kwargs)
+[2019-01-19 13:48:16,297: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1007, in __init__
+    self._create_worker_process(i)
+[2019-01-19 13:48:16,298: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 449, in _create_worker_process
+    return super(AsynPool, self)._create_worker_process(i)
+[2019-01-19 13:48:16,299: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1116, in _create_worker_process
+    w.start()
+[2019-01-19 13:48:16,300: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2019-01-19 13:48:16,304: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2019-01-19 13:48:16,355: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2019-01-19 13:48:16,355: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2019-01-19 13:48:16,356: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2019-01-19 13:48:16,357: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2019-01-19 13:48:16,358: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2019-01-19 13:48:16,360: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 358, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2019-01-19 13:48:16,361: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 549, in _fast_trace_task
+    uuid, args, kwargs, request,
+[2019-01-19 13:48:16,362: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2019-01-19 13:48:16,362: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+[2019-01-19 13:48:16,363: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/DreamTV_world/tasks.py", line 170, in task_parse_url
+    logger.info(url, 'This url is in StopDomain or alredy in our base. DELETED all urls witt this domain from UrlStack!!!')
+[2019-01-19 13:48:16,364: WARNING/ForkPoolWorker-3] Message: 'https://namvideo.com/watch/T74QISeCr6Q'
+Arguments: ('This url is in StopDomain or alredy in our base. DELETED all urls witt this domain from UrlStack!!!',)
+[2019-01-19 13:48:16,461: INFO/ForkPoolWorker-3] Task DreamTV_world.tasks.task_parse_url[f96010e5-1ea9-430f-b437-eb10001d500c] succeeded in 0.5632309619999996s: {'url': None, 'need_manual_check': False, 'error': 'This url is in StopDomain or alredy in our base'}
+[2019-01-19 13:48:16,463: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10aca6488> (args:('DreamTV_world.tasks.task_parse_url', '1ceee281-48a2-4064-a827-dcbd5ad8e56d', {'lang': 'py', 'task': 'DreamTV_world.tasks.task_parse_url', 'id': '1ceee281-48a2-4064-a827-dcbd5ad8e56d', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '1ceee281-48a2-4064-a827-dcbd5ad8e56d', 'parent_id': None, 'argsrepr': "('LgPWgqVGanA', '10-websites-you-can-make-100-a-day-from-online-no-special-skills', 'http://mp3.zuhur.az/10-websites-you-can-make-100-a-day-from-online-no-special-skills/LgPWgqVGanA.html')", 'kwargsrepr': '{}', 'origin': 'gen13109@MacBook-Pro-Aleksej-2.local', 'redelivered': True, 'reply_to': '215cf582-06aa-3039-9b8c-0ad85b73ff8e', 'correlation_id': '1ceee281-48a2-4064-a827-dcbd5ad8e56d', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["LgPWgqVGanA", "10-websites-you-can-make-100-a-day-from-online-no-special-skills",... kwargs:{})
+[2019-01-19 13:48:16,465: DEBUG/MainProcess] Task accepted: DreamTV_world.tasks.task_parse_url[1ceee281-48a2-4064-a827-dcbd5ad8e56d] pid:13321
+[2019-01-19 13:48:16,466: WARNING/ForkPoolWorker-3] --- Logging error ---
+[2019-01-19 13:48:16,468: WARNING/ForkPoolWorker-3] Traceback (most recent call last):
+[2019-01-19 13:48:16,469: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 983, in emit
+    msg = self.format(record)
+[2019-01-19 13:48:16,470: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 829, in format
+    return fmt.format(record)
+[2019-01-19 13:48:16,471: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/log.py", line 46, in format
+    return ColorFormatter.format(self, record)
+[2019-01-19 13:48:16,472: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/utils/log.py", line 153, in format
+    msg = logging.Formatter.format(self, record)
+[2019-01-19 13:48:16,472: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 569, in format
+    record.message = record.getMessage()
+[2019-01-19 13:48:16,473: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 331, in getMessage
+    msg = msg % self.args
+[2019-01-19 13:48:16,474: WARNING/ForkPoolWorker-3] TypeError: not all arguments converted during string formatting
+[2019-01-19 13:48:16,475: WARNING/ForkPoolWorker-3] Call stack:
+[2019-01-19 13:48:16,481: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/bin/celery", line 11, in <module>
+    sys.exit(main())
+[2019-01-19 13:48:16,484: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+[2019-01-19 13:48:16,485: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+[2019-01-19 13:48:16,486: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+[2019-01-19 13:48:16,487: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 275, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+[2019-01-19 13:48:16,488: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 488, in handle_argv
+    return self.execute(command, argv)
+[2019-01-19 13:48:16,489: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 420, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+[2019-01-19 13:48:16,489: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+[2019-01-19 13:48:16,490: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 238, in __call__
+    ret = self.run(*args, **kwargs)
+[2019-01-19 13:48:16,491: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    worker.start()
+[2019-01-19 13:48:16,492: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+[2019-01-19 13:48:16,560: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+[2019-01-19 13:48:16,561: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+[2019-01-19 13:48:16,562: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 131, in start
+    self.on_start()
+[2019-01-19 13:48:16,563: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 112, in on_start
+    **self.options)
+[2019-01-19 13:48:16,564: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 432, in __init__
+    super(AsynPool, self).__init__(processes, *args, **kwargs)
+[2019-01-19 13:48:16,564: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1007, in __init__
+    self._create_worker_process(i)
+[2019-01-19 13:48:16,565: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 449, in _create_worker_process
+    return super(AsynPool, self)._create_worker_process(i)
+[2019-01-19 13:48:16,566: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1116, in _create_worker_process
+    w.start()
+[2019-01-19 13:48:16,567: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2019-01-19 13:48:16,568: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2019-01-19 13:48:16,605: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2019-01-19 13:48:16,606: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2019-01-19 13:48:16,607: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2019-01-19 13:48:16,608: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2019-01-19 13:48:16,608: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2019-01-19 13:48:16,609: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 358, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2019-01-19 13:48:16,610: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 549, in _fast_trace_task
+    uuid, args, kwargs, request,
+[2019-01-19 13:48:16,611: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2019-01-19 13:48:16,612: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+[2019-01-19 13:48:16,613: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/DreamTV_world/tasks.py", line 161, in task_parse_url
+    logger.info(key, slug)
+[2019-01-19 13:48:16,614: WARNING/ForkPoolWorker-3] Message: 'LgPWgqVGanA'
+Arguments: ('10-websites-you-can-make-100-a-day-from-online-no-special-skills',)
+[2019-01-19 13:48:16,701: WARNING/ForkPoolWorker-3] --- Logging error ---
+[2019-01-19 13:48:16,706: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[1a2a5073-4a25-425b-8991-e998718f2724]  
+[2019-01-19 13:48:16,705: WARNING/ForkPoolWorker-3] Traceback (most recent call last):
+[2019-01-19 13:48:16,721: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 983, in emit
+    msg = self.format(record)
+[2019-01-19 13:48:16,722: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 829, in format
+    return fmt.format(record)
+[2019-01-19 13:48:16,723: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/log.py", line 46, in format
+    return ColorFormatter.format(self, record)
+[2019-01-19 13:48:16,723: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/utils/log.py", line 153, in format
+    msg = logging.Formatter.format(self, record)
+[2019-01-19 13:48:16,724: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 569, in format
+    record.message = record.getMessage()
+[2019-01-19 13:48:16,725: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 331, in getMessage
+    msg = msg % self.args
+[2019-01-19 13:48:16,726: WARNING/ForkPoolWorker-3] TypeError: not all arguments converted during string formatting
+[2019-01-19 13:48:16,727: WARNING/ForkPoolWorker-3] Call stack:
+[2019-01-19 13:48:16,729: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/bin/celery", line 11, in <module>
+    sys.exit(main())
+[2019-01-19 13:48:16,730: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+[2019-01-19 13:48:16,731: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+[2019-01-19 13:48:16,732: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+[2019-01-19 13:48:16,732: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 275, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+[2019-01-19 13:48:16,733: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 488, in handle_argv
+    return self.execute(command, argv)
+[2019-01-19 13:48:16,734: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 420, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+[2019-01-19 13:48:16,735: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+[2019-01-19 13:48:16,736: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 238, in __call__
+    ret = self.run(*args, **kwargs)
+[2019-01-19 13:48:16,736: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    worker.start()
+[2019-01-19 13:48:16,737: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+[2019-01-19 13:48:16,738: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+[2019-01-19 13:48:16,739: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+[2019-01-19 13:48:16,740: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 131, in start
+    self.on_start()
+[2019-01-19 13:48:16,741: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 112, in on_start
+    **self.options)
+[2019-01-19 13:48:16,744: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 432, in __init__
+    super(AsynPool, self).__init__(processes, *args, **kwargs)
+[2019-01-19 13:48:16,745: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1007, in __init__
+    self._create_worker_process(i)
+[2019-01-19 13:48:16,745: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 449, in _create_worker_process
+    return super(AsynPool, self)._create_worker_process(i)
+[2019-01-19 13:48:16,746: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1116, in _create_worker_process
+    w.start()
+[2019-01-19 13:48:16,747: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2019-01-19 13:48:16,748: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2019-01-19 13:48:16,749: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2019-01-19 13:48:16,749: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2019-01-19 13:48:16,750: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2019-01-19 13:48:16,751: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2019-01-19 13:48:16,752: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2019-01-19 13:48:16,754: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 358, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2019-01-19 13:48:16,755: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 549, in _fast_trace_task
+    uuid, args, kwargs, request,
+[2019-01-19 13:48:16,756: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2019-01-19 13:48:16,757: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+[2019-01-19 13:48:16,758: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/DreamTV_world/tasks.py", line 170, in task_parse_url
+    logger.info(url, 'This url is in StopDomain or alredy in our base. DELETED all urls witt this domain from UrlStack!!!')
+[2019-01-19 13:48:16,762: WARNING/ForkPoolWorker-3] Message: 'http://mp3.zuhur.az/10-websites-you-can-make-100-a-day-from-online-no-special-skills/LgPWgqVGanA.html'
+Arguments: ('This url is in StopDomain or alredy in our base. DELETED all urls witt this domain from UrlStack!!!',)
+[2019-01-19 13:48:16,804: INFO/ForkPoolWorker-3] Task DreamTV_world.tasks.task_parse_url[1ceee281-48a2-4064-a827-dcbd5ad8e56d] succeeded in 0.3390004960000006s: {'url': None, 'need_manual_check': False, 'error': 'This url is in StopDomain or alredy in our base'}
+[2019-01-19 13:48:16,812: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x10aca6488> (args:('DreamTV_world.tasks.task_parse_url', 'a31ceb67-d6a7-4a4a-abcb-4e60463ecd68', {'lang': 'py', 'task': 'DreamTV_world.tasks.task_parse_url', 'id': 'a31ceb67-d6a7-4a4a-abcb-4e60463ecd68', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'a31ceb67-d6a7-4a4a-abcb-4e60463ecd68', 'parent_id': None, 'argsrepr': "('LgPWgqVGanA', '10-websites-you-can-make-100-a-day-from-online-no-special-skills', 'https://acdng.org/2015/05/')", 'kwargsrepr': '{}', 'origin': 'gen13109@MacBook-Pro-Aleksej-2.local', 'redelivered': True, 'reply_to': '215cf582-06aa-3039-9b8c-0ad85b73ff8e', 'correlation_id': 'a31ceb67-d6a7-4a4a-abcb-4e60463ecd68', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[["LgPWgqVGanA", "10-websites-you-can-make-100-a-day-from-online-no-special-skills", "https://acdng.org/2015/05/"], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2019-01-19 13:48:16,815: DEBUG/MainProcess] Task accepted: DreamTV_world.tasks.task_parse_url[a31ceb67-d6a7-4a4a-abcb-4e60463ecd68] pid:13321
+[2019-01-19 13:48:16,817: WARNING/ForkPoolWorker-3] --- Logging error ---
+[2019-01-19 13:48:16,818: WARNING/ForkPoolWorker-3] Traceback (most recent call last):
+[2019-01-19 13:48:16,820: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 983, in emit
+    msg = self.format(record)
+[2019-01-19 13:48:16,824: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 829, in format
+    return fmt.format(record)
+[2019-01-19 13:48:16,825: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/log.py", line 46, in format
+    return ColorFormatter.format(self, record)
+[2019-01-19 13:48:16,826: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/utils/log.py", line 153, in format
+    msg = logging.Formatter.format(self, record)
+[2019-01-19 13:48:16,827: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 569, in format
+    record.message = record.getMessage()
+[2019-01-19 13:48:16,828: WARNING/ForkPoolWorker-3] File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py", line 331, in getMessage
+    msg = msg % self.args
+[2019-01-19 13:48:16,854: WARNING/ForkPoolWorker-3] TypeError: not all arguments converted during string formatting
+[2019-01-19 13:48:16,855: WARNING/ForkPoolWorker-3] Call stack:
+[2019-01-19 13:48:16,858: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/bin/celery", line 11, in <module>
+    sys.exit(main())
+[2019-01-19 13:48:16,859: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/__main__.py", line 16, in main
+    _main()
+[2019-01-19 13:48:16,860: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+[2019-01-19 13:48:16,861: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+[2019-01-19 13:48:16,862: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 275, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+[2019-01-19 13:48:16,862: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 488, in handle_argv
+    return self.execute(command, argv)
+[2019-01-19 13:48:16,863: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/celery.py", line 420, in execute
+    ).run_from_argv(self.prog_name, argv[1:], command=argv[0])
+[2019-01-19 13:48:16,880: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 223, in run_from_argv
+    return self(*args, **options)
+[2019-01-19 13:48:16,881: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/base.py", line 238, in __call__
+    ret = self.run(*args, **kwargs)
+[2019-01-19 13:48:16,887: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bin/worker.py", line 258, in run
+    worker.start()
+[2019-01-19 13:48:16,888: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+[2019-01-19 13:48:16,889: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+[2019-01-19 13:48:16,897: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+[2019-01-19 13:48:16,898: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 131, in start
+    self.on_start()
+[2019-01-19 13:48:16,901: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 112, in on_start
+    **self.options)
+[2019-01-19 13:48:16,906: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 432, in __init__
+    super(AsynPool, self).__init__(processes, *args, **kwargs)
+[2019-01-19 13:48:16,923: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1007, in __init__
+    self._create_worker_process(i)
+[2019-01-19 13:48:16,929: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 449, in _create_worker_process
+    return super(AsynPool, self)._create_worker_process(i)
+[2019-01-19 13:48:16,930: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1116, in _create_worker_process
+    w.start()
+[2019-01-19 13:48:16,931: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2019-01-19 13:48:16,931: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2019-01-19 13:48:16,932: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2019-01-19 13:48:16,933: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2019-01-19 13:48:16,934: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2019-01-19 13:48:16,935: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2019-01-19 13:48:16,936: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 289, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2019-01-19 13:48:16,936: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 358, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2019-01-19 13:48:16,951: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 549, in _fast_trace_task
+    uuid, args, kwargs, request,
+[2019-01-19 13:48:16,952: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 382, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2019-01-19 13:48:16,952: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/app/trace.py", line 641, in __protected_call__
+    return self.run(*args, **kwargs)
+[2019-01-19 13:48:16,953: WARNING/ForkPoolWorker-3] File "/Users/mymac/PycharmProjects/DreamTV_world/DreamTV_world/tasks.py", line 161, in task_parse_url
+    logger.info(key, slug)
+[2019-01-19 13:48:16,954: WARNING/ForkPoolWorker-3] Message: 'LgPWgqVGanA'
+Arguments: ('10-websites-you-can-make-100-a-day-from-online-no-special-skills',)
+[2019-01-19 13:48:17,051: WARNING/ForkPoolWorker-3] /Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+  warnings.warn('Selenium support for PhantomJS has been deprecated, please use headless '
+[2019-01-19 13:48:18,712: INFO/MainProcess] Received task: DreamTV_world.tasks.task_parse_url[7ff0b23a-dd14-4db7-8073-1fe55388b04b]  
+[2019-01-19 13:48:27,147: DEBUG/MainProcess] | Worker: Closing Hub...
+[2019-01-19 13:48:27,148: DEBUG/MainProcess] | Worker: Closing Pool...
+[2019-01-19 13:48:27,149: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2019-01-19 13:48:27,149: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2019-01-19 13:48:27,150: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2019-01-19 13:48:27,150: DEBUG/MainProcess] | Consumer: Closing Events...
+[2019-01-19 13:48:27,151: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2019-01-19 13:48:27,151: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2019-01-19 13:48:27,152: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2019-01-19 13:48:27,152: DEBUG/MainProcess] | Consumer: Closing Control...
+[2019-01-19 13:48:27,152: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2019-01-19 13:48:27,153: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2019-01-19 13:48:27,153: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2019-01-19 13:48:27,153: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2019-01-19 13:48:27,161: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2019-01-19 13:48:27,167: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2019-01-19 13:48:27,167: DEBUG/MainProcess] Canceling task consumer...
+[2019-01-19 13:48:27,168: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2019-01-19 13:48:27,168: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2019-01-19 13:48:27,170: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2019-01-19 13:48:27,170: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2019-01-19 13:48:27,171: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2019-01-19 13:48:27,173: ERROR/MainProcess] Error on stopping Pool: TypeError("can't pickle _thread.lock objects")
+Traceback (most recent call last):
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 317, in start
+    blueprint.start(self)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 593, in start
+    c.loop(*c.loop_args())
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/worker/loops.py", line 91, in asynloop
+    next(loop)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/kombu/asynchronous/hub.py", line 298, in create_loop
+    events = poll(poll_timeout)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/kombu/utils/eventio.py", line 217, in poll
+    event_list = self._quick_poll(timeout)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/apps/worker.py", line 284, in _handle_request
+    raise exc(exitcode)
+celery.exceptions.WorkerShutdown: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 151, in send_all
+    fun(parent, *args)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/bootsteps.py", line 373, in stop
+    return self.obj.stop()
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/base.py", line 122, in stop
+    self.on_stop()
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/prefork.py", line 140, in on_stop
+    self._pool.join()
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 1578, in join
+    stop_if_not_current(self._result_handler)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 143, in stop_if_not_current
+    thread.stop(timeout)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 500, in stop
+    self.on_stop_not_started()
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/celery/concurrency/asynpool.py", line 332, in on_stop_not_started
+    check_timeouts()
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 744, in handle_event
+    next(self._it)
+  File "/Users/mymac/PycharmProjects/DreamTV_world/venv/lib/python3.7/site-packages/billiard/pool.py", line 697, in handle_timeouts
+    cache = copy.deepcopy(self.cache)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 150, in deepcopy
+    y = copier(x, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 240, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 180, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 280, in _reconstruct
+    state = deepcopy(state, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 150, in deepcopy
+    y = copier(x, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 240, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 180, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 280, in _reconstruct
+    state = deepcopy(state, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 150, in deepcopy
+    y = copier(x, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 240, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 180, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 280, in _reconstruct
+    state = deepcopy(state, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 150, in deepcopy
+    y = copier(x, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 240, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py", line 169, in deepcopy
+    rv = reductor(4)
+TypeError: can't pickle _thread.lock objects
+[2019-01-19 13:48:27,196: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2019-01-19 13:48:27,197: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2019-01-19 13:48:27,197: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2019-01-19 13:48:27,197: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2019-01-19 13:48:27,198: DEBUG/MainProcess] Canceling task consumer...
+[2019-01-19 13:48:27,198: DEBUG/MainProcess] Closing consumer channel...
+[2019-01-19 13:48:27,199: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2019-01-19 13:48:27,199: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2019-01-19 13:48:27,200: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2019-01-19 13:48:27,201: WARNING/MainProcess] Restoring 16 unacknowledged message(s)
+[2019-01-19 13:48:27,233: DEBUG/MainProcess] removing tasks from inqueue until task handler finished

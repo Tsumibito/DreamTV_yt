@@ -1,0 +1,8 @@
+Index: DreamTV_world/test.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- DreamTV_world/test.py	(date 1540640958000)
++++ DreamTV_world/test.py	(date 1540640958000)
+@@ -0,0 +1,0 @@
