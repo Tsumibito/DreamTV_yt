@@ -14,7 +14,7 @@
 
         function getValues(){
             $.ajax({
-                url: 'http://127.0.0.1:8000/generator/add_search_urls/processor/',
+                url: 'http://127.0.0.1:8000/generator/add_search_keys/processor/',
                 type: 'get',
                 dataType: 'json',
                 cache: false,
@@ -36,7 +36,9 @@
                 //console.log(data.result[i])
                 html_code += '<tr class="' + color_state +'">';
                 html_code += '<td>'+ (i+1) +'</td>';
-                html_code += '<td><a target="_blank"' + data.result[i].url + '">' + data.result[i].url + '</a></td>';
+                html_code += '<td><a target="_blank" href="https://www.youtube.com/watch?v=' + data.result[i].key + '">' + data.result[i].key + '</a></td>';
+                html_code += '<td>'+ data.result[i].views +'</td>';
+                html_code += '<td>' + data.result[i].desc + '</td>';
                 html_code += '<td>' + data.result[i].created + '</td>';
                 if (data.result[i].created === true){
                     added +=1;

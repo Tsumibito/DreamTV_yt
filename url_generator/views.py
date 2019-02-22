@@ -4,21 +4,27 @@ from url_generator.models import UrlGeneratorTask, SearchStack, SearchUrlStack
 from url_generator.forms import UrlGeneratorTaskModelForm, AddUrlsForm, AddSearchUrlsForm, ParseUrlsForm
 from django.utils.text import slugify
 
+from unidecode import unidecode
+
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import authentication
 from rest_framework import permissions
-from DreamTV_world.tasks import task_check_UrlGenerator_url, task_check_url_and_add_to_UrlGenerator, task_key_search, task_parse_url
+from DreamTV_world.tasks import *
 from celery.result import AsyncResult
+import requests
 import celery
 from celery import uuid
 from urllib.parse import quote, unquote
+import codecs
+import urllib
 
 from url_generator.utils import *
 
 
 def generator_settings(request):
     context = {}
+    lp_urls = []
     url_list = UrlGenerator.objects.filter(active=True)
     context['active_count'] = len(url_list)
 
@@ -36,12 +42,28 @@ def generator_settings(request):
                     for i in range(url_generator_task.desc_variations):
                         tmp_url = insert_data_in_url(str(my_url), url_generator_task.youtube_key(), slugify(desc_temp.pop().lower(), allow_unicode=True))
                         url_generator_task.results += create_url_html_link(tmp_url)
+                        lp_urls.append(tmp_url)
                         url_generator_task.links_number += 1
                 else:
-                    tmp_url =insert_data_in_url(str(my_url), url_generator_task.youtube_key())
+                    tmp_url = insert_data_in_url(str(my_url), url_generator_task.youtube_key())
                     url_generator_task.results += create_url_html_link(tmp_url)
+                    lp_urls.append(tmp_url)
                     url_generator_task.links_number += 1
             url_generator_task.save()
+
+            key = '9834099457cd9c6386dab483c126e73a8db99129f591'
+            proj_name = url_generator_task.youtube_key()
+            dripfeed = 7
+            urls = '|'.join(lp_urls[0:1999])
+            params = {'apikey': key, 'proj_name': proj_name, 'dripfeed': dripfeed, 'urls': urls}
+            linkprocessor = requests.post('https://api.linkprocessor.net/api.php', data=params)
+            if linkprocessor.status_code != 200:
+                (print(linkprocessor.status_code))
+                (print(linkprocessor.content))
+            else:
+
+                (print(linkprocessor.content))
+
             return redirect('url_generator:generator_res', id=instance.id)
     else:
         form = UrlGeneratorTaskModelForm()
@@ -145,43 +167,31 @@ class AddUrlsProcessor(APIView):
                             'test': insert_data_in_url(str(url_dic['url']), '4pCD17L_bRE') })
         return Response(res)
 
-def add_search_urls(request):
+def add_search_keys(request):
     context = {}
-    context_results = {'key': '', 'slug': '', 'task': '', 'errors': ''}
+    context_results = {'key': '', 'task': '', 'errors': ''}
     if request.method == 'POST':
         form = AddSearchUrlsForm(request.POST)
         if form.is_valid():
             instance = form.cleaned_data
             key = instance['key']
-            slug = instance['description']
-
-            if key not in SearchStack.keys.keys_all():
-                context_results['key'] = key
-                context_results['slug'] = slug
-                print(key, 'trying to parse search')
-                search_res_task = task_key_search.delay(key, slug, stop_page=3, on_page=100)
-                context_results['task'] = str(search_res_task.task_id)
-
-            else:
-                print(key, '- is already in list')
-                context_results['errors'] = 'KEY %s ALREADY IN OUR LIST' % key
-
+            task = task_get_youtube_keys_and_slugs.delay(key)
+            context_results['key'] = key
+            context_results['task'] = str(task)
 
             request.session['context_data'] = context_results
-            return redirect('url_generator:add_search_urls_results')
+            return redirect('url_generator:add_search_keys_results')
 
     form = AddSearchUrlsForm()
     context['form'] = form
-    return render(request, 'url_generator/add_search_urls.html', context)
+    return render(request, 'url_generator/add_search_keys.html', context)
 
-
-def add_search_urls_results(request):
+def add_search_keys_results(request):
     context = request.session.get('context_data')
-    print(context)
 
-    return render(request, 'url_generator/add_search_urls_results.html', context)
+    return render(request, 'url_generator/add_search_keys_results.html', context)
 
-class AddSearchUrlsProcessor(APIView):
+class AddSearchKeysProcessor(APIView):
     authentication_classes = (authentication.SessionAuthentication,)
     permission_classes = (permissions.BasePermission, )
 
@@ -192,16 +202,66 @@ class AddSearchUrlsProcessor(APIView):
              curunt_task = AsyncResult(context_data['task'])
              res['task'] =  str(curunt_task.task_id)
              res['status'] = str(curunt_task.status)
-             try:
-                res['result'] = curunt_task.info
-             except TypeError:
-                res['result'] = str(curunt_task.info)
-                print('Type error in AddSearchUrlsProcessor')
+             res['result'] = curunt_task.info
 
         return Response(res)
 
+def add_search_urls(request):
+    context_results = []
+
+    for key_instance in SearchStack.objects.filter(processed=False)[0:5]:
+        res_dic = {'errors': ''}
+        res_dic['key'] = str(key_instance.key)
+        task = task_key_search.delay(key_instance.key)
+        res_dic['task'] = str(task)
+        context_results.append(res_dic)
+
+    request.session['context_data'] = {'context_results': context_results}
+    return redirect('url_generator:add_search_urls_results')
+
+def add_search_urls_results(request):
+    context = request.session.get('context_data')
+
+    return render(request, 'url_generator/add_search_urls_results.html', context)
+
+class AddSearchUrlsProcessor(APIView):
+    authentication_classes = (authentication.SessionAuthentication,)
+    permission_classes = (permissions.BasePermission, )
+
+    def get(self, request):
+        res = {}
+        context_data = request.session.get('context_data')
+
+        res_list = []
+        for task_dic in context_data['context_results']:
+            print(task_test)
+            res = {}
+            task = AsyncResult(task_dic['task'])
+            res['key'] = task_dic['key']
+            res['task'] = str(task.task_id)
+            res['status'] = str(task.status)
+            res['result'] = task.info
+            res_list.append(res)
+
+        return Response(res_list)
+
 
 def sus_domains(request):           # Test code view
+    res = {'url': None, 'need_manual_check': False, 'error': None}
+    url = 'http://hotmusicleak.com/10-alternatif-rantai-salju-paling-menakjubkan-untuk-musim-dingin-ini/!key!.html'
+    url_obj = UrlConstructor(url)
+    slug = '10-most-amazing-snow-chain-alternatives-for-this-winter'
+    tmp_res = None
+
+
+    if not res['url'] and url_obj.url.lower().find(slug) != -1:
+        fragment = url_obj.url[url_obj.url.lower().find(slug):url_obj.url.lower().find(slug)+len(slug)]
+        check_url = url_obj.url.replace(fragment, '!anc!')
+        if task_check_this_url(check_url):
+            res['url'] = check_url
+        else:
+            res['error'] = 'Have exact slug match in url, but url does not work with !anc!'
+
 
     return redirect('url_generator:generator_settings')
 
@@ -216,7 +276,9 @@ def parse_urls(request):
             urls = []
             instance = form.cleaned_data
             key = instance['chouce_key']
-            slug = SearchStack.objects.get(key=str(key)).slug
+            serch_stack = SearchStack.objects.get(key=str(key))
+            slug = serch_stack.slug
+            slug_uni = serch_stack.slug_uni
             urls_filter = SearchUrlStack.objects.filter(key__key=key)
             if len(urls_filter) > 0:
                 for url_instance in urls_filter:
@@ -227,7 +289,7 @@ def parse_urls(request):
                 context_results['urls_count'] = urls_count
                 context_results['parse_tasks'] = []
                 for url in urls:
-                    task = task_parse_url.delay(key, slug, url)
+                    task = task_parse_url.delay(key, slug, slug_uni, url)
                     context_results['parse_tasks'].append({'url': url, 'task': str(task), 'status': 'INITIALISING', 'result': None})
             else:
                 print('Zero URLS are in this Key stack')
@@ -252,8 +314,9 @@ class ParseUrlsProcessor(APIView):
     def get(self, request):
         res_list = []
         context_data = request.session.get('context_parse_results')
-        print(context_data)
+        #print(context_data)
         if 'parse_tasks' in context_data:
+            #print(context_data['parse_tasks'])
             for task_dic in context_data['parse_tasks']:
                 res = {}
                 task = AsyncResult(task_dic['task'])

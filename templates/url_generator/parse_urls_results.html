@@ -23,21 +23,43 @@
             <div class="container">
 
                 <div class="jumbotron">
-                    <h1>Ready URLS Results</h1>
+                    <h1>Ready Prsed URLS Results</h1>
                 </div>
                 <div class="panel-heading">
-                    <h3 class="panel-title">URLs added to our base: {{ count_ready_urls }}</h3>
-                </div>
-                <div class="panel-body">
-                    {{ ready_urls|safe }}
+                    <h3 class="panel-title">{{ key }} ----- {{ slug }}</h3>
+                    <h3 class="panel-title">URLs in parse list: {{ urls_count }}</h3>
+                    <h4 class="panel-title" id="work-fine">URLs that added to our base: <b>0</b></h4>
+                    <h4 class="panel-title" id="junk">Junk URLs: <b>0</b></h4>
                 </div>
 
-                <div class="panel-heading">
-                    <h3 class="panel-title">URLs that need manual review: {{ count_manual_review }}</h3>
-                </div>
                 <div class="panel-body">
-                    {{ manual_review|safe }}
+                    <table class="table table-sm" id="table" >
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Url</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Errors</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for c_url in parse_tasks %}
+                            <tr class="table active">
+                                <th scope="row">{{ forloop.counter }}</th>
+                                <td>{{ c_url.url|safe }}</td>
+                                <td>INITIALAZUNG</td>
+                                <td>None</td>
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
                 </div>
+
 
             </div>
         {% endblock body_content %}
+
+{% block jsfin %}
+    <script src="{% static 'js/parse_urls_results.js' %}" type="text/javascript"></script>
+{% endblock jsfin %}

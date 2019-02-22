@@ -37,7 +37,7 @@
         </div>
 
         <div class="panel-body">
-            <table class="table table-sm" id="table">
+            <table class="table table-sm" id="table" style="table-layout: fixed; max-width: 100%">
                 <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -48,9 +48,9 @@
                 </thead>
                 <tbody>
                 {% for c_url in check_urls %}
-                    <tr class="table active">
+                    <tr class="table active" style="width: 300em">
                         <th scope="row">{{ forloop.counter }}</th>
-                        <td>{{ check_urls.url|safe }}</td>
+                        <td >{{ c_url.url|safe }}</td>
                         <td>INITIALAZUNG</td>
                         <td>None</td>
                     </tr>
@@ -58,6 +58,7 @@
 
                 </tbody>
             </table>
+        </div>
 
         <div class="panel-heading">
             <h3 class="panel-title">URLs in that already in our base: {{ have_urls_count }}</h3>

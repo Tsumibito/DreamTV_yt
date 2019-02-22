@@ -60,6 +60,8 @@ class StopDomainObjectsManager(models.Manager):
 class StopDomain(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     domain = models.CharField(max_length=64, verbose_name=u'Domain name')
+    url = models.CharField(max_length=512, verbose_name=u'Url that where baned',null=True, blank=True)
+    reason = models.CharField(max_length=256, verbose_name=u'Bane reason or error',null=True, blank=True)
     domains = StopDomainManager()
     objects = StopDomainObjectsManager()
 
@@ -79,7 +81,11 @@ class SearchStackObjectsManager(models.Manager):
 
 class SearchStack(models.Model):
     key = models.CharField(max_length=11, verbose_name=u'Youtube key')
-    slug = models.CharField(max_length=256, verbose_name=u'slug')
+    desc = models.CharField(max_length=256, verbose_name=u'Youtube desc', blank=True, null=True)
+    slug = models.CharField(max_length=256, verbose_name=u'slug', blank=True, null=True)
+    slug_uni = models.CharField(max_length=256, verbose_name=u'slug_unicode_safe', blank=True, null=True)
+    views = models.IntegerField(blank=True, null=True, default=0)
+    processed = models.BooleanField(default=False)
     keys = SearchStackManager()
     objects = SearchStackObjectsManager()
 
@@ -90,6 +96,7 @@ class SearchUrlStack(models.Model):
     key = models.ForeignKey(SearchStack, blank=True, null=True, default=None, on_delete=models.CASCADE)
     url = models.CharField(max_length=512, verbose_name=u'URL')
     domain = models.CharField(max_length=64, verbose_name=u'Domain name', blank=True, null=True)
+    attempt = models.IntegerField(blank=True, null=True, default=0)
     checked_light = models.BooleanField(default=False)
     checked_full = models.BooleanField(default=False)
 
