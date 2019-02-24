@@ -3,6 +3,15 @@ from DreamTV_world import tasks
 from url_generator.models import UrlGenerator, StopDomain, SearchUrlStack
 
 
+def youtube_links_in_source(source, key=''):
+    res = False
+    if 'youtube.com/watch?v=%s' % key in source \
+            or 'youtube-nocookie.com/embed/%s' % key in source or 'youtube.com/embed/%s' % key in source or 'youtu.be/embed/%s' % key in source \
+            or ('youtube.com/player_api' in source and "videoId: '%s'" % key in source):
+        res = True
+
+    return res
+
 def url_is_valid(url_obj):
     error = _check_if_url_in_stop_domain_list_or_our_base(url_obj)
     if not error:

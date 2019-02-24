@@ -37,27 +37,19 @@ def task_check_UrlGenerator_url(url_name):
 
     browser.get(url)
     source = get_source_with_iframes(browser)
-    if browser.current_url == url and desc.lower() in source.lower() and 'youtube.com/watch?v=%s' % key in source \
-            or 'youtube-nocookie.com/embed/%s' % key in source or 'youtube.com/embed/%s' % key in source or 'youtu.be/embed/%s' % key in source \
-            or ('youtube.com/player_api' in source and "videoId: '%s'" % key in source):
+    if browser.current_url == url and desc.lower() in source.lower() and youtube_links_in_source(source, key):
         res = True
     else:
         time.sleep(7)
         source = get_source_with_iframes(browser)
-        if browser.current_url == url and desc.lower() in source.lower() and 'youtube.com/watch?v=%s' % key in source \
-                or 'youtube-nocookie.com/embed/%s' % key in source or 'youtube.com/embed/%s' % key in source or 'youtu.be/embed/%s' % key in source \
-                or ('youtube.com/player_api' in source and "videoId: '%s'" % key in source):
+        if browser.current_url == url and desc.lower() in source.lower() and youtube_links_in_source(source, key):
             res = True
         elif browser.current_url != url and url.replace(get_http_and_domain(url), get_http_and_domain(browser.current_url)) == browser.current_url \
-                and desc.lower() in source.lower() and 'youtube.com/watch?v=%s' % key in source \
-                or 'youtube-nocookie.com/embed/%s' % key in source or 'youtube.com/embed/%s' % key in source or 'youtu.be/embed/%s' % key in source \
-                or ('youtube.com/player_api' in source and "videoId: '%s'" % key in source):
+                and desc.lower() in source.lower() and youtube_links_in_source(source, key):
             url_instance.url = str(url_instance.url).replace(get_http_and_domain(url), get_http_and_domain(browser.current_url))
             url_instance.save()
             res = True
-        elif browser.current_url != url and desc.lower() in source.lower() and 'youtube.com/watch?v=%s' % key in source \
-                or 'youtube-nocookie.com/embed/%s' % key in source or 'youtube.com/embed/%s' % key in source or 'youtu.be/embed/%s' % key in source \
-                or ('youtube.com/player_api' in source and "videoId: '%s'" % key in source):
+        elif browser.current_url != url and desc.lower() in source.lower() and youtube_links_in_source(source, key):
             url_instance.need_review = True
             url_instance.save()
 
@@ -85,16 +77,12 @@ def task_check_this_url(url_template):
     try:
         browser.get(url)
         source = get_source_with_iframes(browser)
-        if browser.current_url == url and desc.lower() in source.lower() and 'youtube.com/watch?v=%s' % key in source \
-                or 'youtube-nocookie.com/embed/%s' % key in source or 'youtube.com/embed/%s' % key in source or 'youtu.be/embed/%s' % key in source \
-                or ('youtube.com/player_api' in source and "videoId: '%s'" % key in source):
+        if browser.current_url == url and desc.lower() in source.lower() and youtube_links_in_source(source, key):
             res = True
         else:
             time.sleep(5)
             source = get_source_with_iframes(browser)
-            if browser.current_url == url and desc.lower() in source.lower() and 'youtube.com/watch?v=%s' % key in source \
-                    or 'youtube-nocookie.com/embed/%s' % key in source or 'youtube.com/embed/%s' % key in source or 'youtu.be/embed/%s' % key in source \
-                    or ('http://www.youtube.com/player_api' in source and "videoId: '%s'" % key in source):
+            if browser.current_url == url and desc.lower() in source.lower() and youtube_links_in_source(source, key):
                 res = True
         browser.quit()
     except WebDriverException:
@@ -159,7 +147,6 @@ def task_key_search(self, key, stop_page=2, on_page=100):
     urls = []
     res = []
 
-
     dcap = dict(DesiredCapabilities.PHANTOMJS)
     dcap["phantomjs.page.settings.userAgent"] = (get_useraget())
     browser = webdriver.PhantomJS('/Users/mymac/Downloads/phantomjs/bin/phantomjs', desired_capabilities=dcap) #, service_args=service_args
@@ -218,13 +205,11 @@ def test_the_url(url):
         if source:
             if browser.current_url == url and 'ytapi.com/embed/' in source:
                 res['error'] = 'ytapi.com - url -  No ditect youtube-video link'
-            elif browser.current_url == url and 'youtube.com/watch?v=' in source or 'youtube-nocookie.com/embed/' in source \
-                    or 'youtube.com/embed/' in source or 'youtu.be/' in source or ('youtube.com/player_api' in source and 'videoId:' in source):
+            elif browser.current_url == url and youtube_links_in_source(source):
                 res['source'] = browser.page_source
             else:
                 time.sleep(5)
-                if browser.current_url == url and 'youtube.com/watch?v=' in source or 'youtube-nocookie.com/embed/' in source \
-                        or 'youtube.com/embed/' in source or 'youtu.be/' in source or ('youtube.com/player_api' in source and 'videoId:' in source):
+                if browser.current_url == url and youtube_links_in_source(source):
                     res['source'] = browser.page_source
 
         browser.quit()
